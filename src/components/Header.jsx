@@ -15,10 +15,17 @@ const Header = () => {
             Home
           </Link>
           <Link className="item-lista">Productos</Link>
+
+          <Link className="item-lista">Categorias</Link>
           <Link to="/service" className="item-lista">
-            Servicios
+            Contactanos
           </Link>
-          <Link className="item-lista">Ubicacion</Link>
+          <Link to="/service" className="item-lista">
+            Login
+          </Link>
+          <Link to="/service" className="item-lista">
+            Registrate
+          </Link>
         </ul>
       </nav>
       <a href="#" className="ubicacion">
