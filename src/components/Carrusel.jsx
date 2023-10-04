@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/Carrusel.css";
 
 const Carrusel = () => {
@@ -22,6 +22,18 @@ const Carrusel = () => {
       prevIndex === imagenes.length - 1 ? 0 : prevIndex + 1
     );
   };
+
+  const cambiarAutomaticamente = () => {
+    const interval = setInterval(() => {
+      cambiarSiguiente();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  };
+
+  useEffect(() => {
+    cambiarAutomaticamente();
+  }, []);
 
   return (
     <>
@@ -47,7 +59,6 @@ const Carrusel = () => {
           &#8250;
         </button>
       </div>
-      <canvas width="500%" height="100%"></canvas>
     </>
   );
 };

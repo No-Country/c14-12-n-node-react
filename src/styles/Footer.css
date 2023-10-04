@@ -1,0 +1,13 @@
+.pie-pagina {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  font-size: 1.6rem;
+  background-color: rgba(57, 58, 57, 0.541);
+  padding: 4rem;
+}
+
+.items-footer {
+  width: 30%;
+}
