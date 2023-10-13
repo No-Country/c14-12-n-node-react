@@ -7,6 +7,7 @@ const Carrusel = () => {
     "https://res.cloudinary.com/dmiocpap8/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1683944911/v982-d4-01_ksim6m.jpg",
     "https://res.cloudinary.com/dmiocpap8/image/upload/w_200,h_200,c_limit,e_blur:400,o_90,b_black/l_text:arial_80:®,ar_1:1,c_lfill,o_60,co_rgb:ffffff,b_rgb:000000,r_max/v1683944911/v982-d4-01_ksim6m.jpg",
     "https://res.cloudinary.com/dmiocpap8/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1683937410/Programacion-1000x562_uvsvyd.jpg",
+    "https://res.cloudinary.com/dcegmeb0b/image/upload/v1696558679/ojos_x97qyf.jpg",
   ];
 
   const [index, setIndex] = useState(0);
