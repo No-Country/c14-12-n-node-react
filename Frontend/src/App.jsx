@@ -5,15 +5,29 @@ import Service from "./pages/Service";
 import Footer from "./components/Footer";
 import TopBar from "./components/TopBar";
 
+import { useState } from "react";
+import Admin from "./pages/Admin";
+
 function App() {
+  const [auth, setAuth] = useState(false);
+
+  const verify = (state) => {
+    setAuth(prop.auth);
+  };
   return (
     <>
       <Router>
-        <TopBar/>
+        <TopBar />
         <Header />
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/service" exact element={<Service />} />
+
+          {auth ? (
+            <Route path="/admin" exact element={<Admin />} />
+          ) : (
+            <Route path="/" exact element={<Home />} />
+          )}
         </Routes>
         <Footer />
       </Router>
