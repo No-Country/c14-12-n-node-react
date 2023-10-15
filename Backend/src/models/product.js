@@ -1,21 +1,21 @@
 const mongoose = require("mongoose");
-
+//const category = require("category.js");
 const productSchema = mongoose.Schema({
   name: {
     type: String,
     trim: true,
-    required: true,
+    required: true
   },
   price: {
     type: Number,
     trim: true,
-    required: true,
+    required: true
   },
   quantity: {
     type: Number,
     trim: true,
-    required: true,
-  },
+    required: true
+  }
 });
 
-module.exports = mongoose.model("product", productSchema);
+module.exports = mongoose.model("products", productSchema);
