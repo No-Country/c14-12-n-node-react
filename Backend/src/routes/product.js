@@ -3,7 +3,7 @@ const productSchema = require("../models/product");
 
 const router = express.Router();
 
-//Crear producto
+//Create producto
 router.post("/product", (req, res) => {
   const product = productSchema(req.body);
   product
