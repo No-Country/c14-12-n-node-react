@@ -1,31 +1,33 @@
 .contenido-topbar {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 1rem;
-    
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: Fixed (1, 728px);
+  height: Fixed (74px);
+  padding: 9px, 201px, 9px, 201px;
+  gap: 278px;
 }
 
-h3 {
-    font-family: popins, Arial, Helvetica, sans-serif;
-
+h2 {
+  
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .contenido-envios {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
-}    
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .icon-topbar {
-    margin: 1rem;
+  margin: 1rem;
 }
 
 strong {
-    font-size: 1.5rem;
-    font-family: popins, Arial, Helvetica, sans-serif;
-    font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
 }
-
