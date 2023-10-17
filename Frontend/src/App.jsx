@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Service from "./pages/Service";
 import Footer from "./components/Footer";
-// import { database } from "./db/db";
+import { database } from "./db/db";
 import { useState } from "react";
 import Admin from "./pages/Admin";
 
@@ -13,7 +13,7 @@ function App() {
   const verify = (state) => {
     setAuth(prop.auth);
   };
-return (
+  return (
     <>
       <Router>
         <Header />

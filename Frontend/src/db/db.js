@@ -1,6 +1,6 @@
-const api = "http://localhost:4000/api/product";
+const api = "category";
 
-const database = fetch(api)
+const database = fetch(`http://localhost:4000/api/${api}`)
   .then((res) => res.json())
   .then((res) => console.log(res));
 
