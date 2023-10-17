@@ -19,7 +19,6 @@ function App() {
   return (
     <>
       <Router>
-        <TopBar />
 
         <TopBar />
         <Header />
