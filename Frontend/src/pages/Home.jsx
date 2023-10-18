@@ -1,11 +1,14 @@
 import Carrusel from "../components/Carrusel";
+import Products from "../components/Products";
 
 const Home = () => {
   return (
-    <div>
-      <Carrusel />
-      <h1>Home Prueba</h1>
-    </div>
+    <>
+      <div><Carrusel /></div>
+      <div>
+        <Products />
+      </div>
+    </>
   );
 };
 
