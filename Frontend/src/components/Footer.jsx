@@ -1,35 +1,51 @@
 import "../styles/Footer.css";
+import { FaFacebookSquare, FaInstagram, FaWhatsappSquare, FaTiktok, FaEnvelope } from 'react-icons/fa';
 
-const Footer = () => {
+
+
+// function Footer() {
+//   return (
+//     <footer className="pie-de-pagina" >
+//       <div className="copyright">
+//         © 2023 Todos los derechos reservados - c14-12-n-node-react
+//       </div>
+//       <div className="social-icons">
+//         <a className="enlaces-social-icons" href="#"><FaFacebookSquare /></a>
+//         <a className="enlaces-social-icons" href="#"><FaInstagram /></a>
+//         <a className="enlaces-social-icons" href="#"><FaTimesCircle /></a>
+//         <a className="enlaces-social-icons" href="#"><FaWhatsappSquare /></a>
+//         <a className="enlaces-social-icons" href="#"><FaEnvelope /></a>
+//       </div>
+//     </footer>
+//   );
+// }
+// export default Footer;
+
+// import React from 'react';
+
+function Footer() {
   return (
-    <footer className="pie-pagina">
-      <div className="items-footer">
-        <h2 className="footer-title">Marlui</h2>
-        <p className="info-footer">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci vel
-          a quae aperiam fuga expedita, cupiditate ea quibusdam dignissimos
-          culpa eveniet, ducimus temporibus. Similique quaerat non illo incidunt
-          doloribus perspiciatis!
-        </p>
+    <div className="contenedor-footer">
+      <div className="politicas-footer">
+        <a className="contenido-politicas" href='#'>Términos y condiciones</a>
+        <a className="contenido-politicas" href='#'>Políticas de privacidad</a>
+        <h4 className="contenido-derechos" >Copyright © Marlui2023 - Todos los derechos reservados</h4>
       </div>
-      <div className="footer-category">
-        <h2>Categorías</h2>
-        <ul className="footer-category_list">
-          <li className="item-category_footerlist">1</li>
-          <li className="item-category_footerlist">2</li>
-          <li className="item-category_footerlist">3</li>
-          <li className="item-category_footerlist">4</li>
-        </ul>
+      <div className='sociales-footer'>
+        <h1>Marlui</h1>
+        <h3>marlui@correo.com</h3>
+        <h4>Tel: +57-11-222333444</h4>
+        <div className="social-media-icons">
+          <i className="enlaces-social-icons" href="#"><FaFacebookSquare /></i>
+          <i className="enlaces-social-icons" href="#"><FaInstagram /></i>
+          <i className="enlaces-social-icons" href="#"><FaTiktok/></i>
+          <i className="enlaces-social-icons" href="#"><FaWhatsappSquare /></i>
+          <i className="enlaces-social-icons" href="#"><FaEnvelope /></i>
+        </div>
+        <button className="arrepentimiento-footer" >Botón de Arrepentimiento</button>
       </div>
-      <div>
-        <h2 className="footer-recomend">Otro</h2>
-        <p className="recommend-info">Bla bla Bla</p>
-        <p className="recommend-info">Bla bla Bla</p>
-      </div>
-      <img src="" alt="" className="img-footer" />
-      <p className="info-img"></p>
-    </footer>
+    </div>
   );
-};
+}
 
 export default Footer;

@@ -1,9 +1,9 @@
-import Carrusel from "../components/Carrusel";
+import Carousel from "../components/Carousel";
 
 const Home = () => {
   return (
     <div>
-      <Carrusel />
+      <Carousel />
       <h1>Home Prueba</h1>
     </div>
   );

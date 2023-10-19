@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import "../styles/Carrusel.css";
+import "../styles/Carousel.css";
 
-const Carrusel = () => {
+const Carousel = () => {
   const imagenes = [
     "https://res.cloudinary.com/dmiocpap8/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1683944911/v982-d4-01_ksim6m.jpg",
     "https://res.cloudinary.com/dmiocpap8/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1683944911/v982-d4-01_ksim6m.jpg",
@@ -64,4 +64,6 @@ const Carrusel = () => {
   );
 };
 
-export default Carrusel;
+export default Carousel;
+
+
