@@ -7,25 +7,19 @@ import CardSubtitle from "reactstrap/lib/CardSubtitle";
 import CardText from "reactstrap/lib/CardText";
 import Button from "reactstrap/lib/Button";
 import Col from "react-bootstrap/esm/Col";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Product({ name, price, quantity, image }) {
-  
   return (
-    <Col xs={12} sm={6} lg={4} xxl={3}>
-      <Card
-        color="light"
-        style={{
-          width: "18rem",
-        }}
-      >
+    <Col style={{ display: "flex", flexDirection: "row", width: "20%"}}>
+      <Card color="light" style={{}}>
         <img alt={name} src={image} />
         <CardBody>
           <CardTitle tag="h5">{name}</CardTitle>
-          <CardSubtitle className="mb-2 text-muted" tag="h6">
-          <CardSubtitle className="mb-2 text-muted" tag="h6">
-            quedan {quantity}
-          </CardSubtitle>
+          <CardSubtitle className="mb-2 text-muted" >
+            <CardSubtitle className="mb-2 text-muted">
+              quedan {quantity}
+            </CardSubtitle>
             ${price}
           </CardSubtitle>
           <CardText>

@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Service from "./pages/Service";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 // import { database } from "./db/db";
 // import { useState } from "react";
 // import Admin from "./pages/Admin";
@@ -21,11 +21,11 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/service" exact element={<Service />} />
-          {/* {auth ? ( 
+          {/* {auth ? (
             <Route path="/admin" exact element={<Admin />} />
-          ) : ( */} 
+          ) : ( */}
         </Routes>
-        <Footer /> 
+        {/* <Footer />  */}
       </Router>
     </>
   );

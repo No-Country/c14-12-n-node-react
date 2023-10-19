@@ -20,15 +20,15 @@ function Products() {
     fetchData();
   }, []);
 
-   if (loading) {
+  if (loading) {
     return (
       <div className="d-flex align-items-center">
-      {<Spinner animation="grow" />}
-     </div>
-   );
+        {<Spinner animation="grow" />}
+      </div>
+    );
   } else {
     return (
-      <div>
+      <div style={{display:"flex", flexWrap:"wrap"}}>
         {product.map((product) => (
           <Product
              {...product}
