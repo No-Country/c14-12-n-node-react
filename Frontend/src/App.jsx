@@ -8,10 +8,10 @@ import { useState } from "react";
 import Admin from "./pages/Admin";
 
 function App() {
-  const [auth, setAuth] = useState(false);
+  const [auth, setAuth] = useState(true);
 
-  const verify = (state) => {
-    setAuth(prop.auth);
+  const verify = () => {
+    const auth = database.setAuth(prop.auth);
   };
   return (
     <>
