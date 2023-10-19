@@ -15,8 +15,13 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
     "react-router-dom": "^6.17.0",
     "reactstrap": "^9.2.0"
+=======
+    "react-icons": "^4.11.0",
+    "react-router-dom": "^6.16.0"
+>>>>>>> 7fa69012cb32ca9897856a2cf58d95dd4f393fab
   },
   "devDependencies": {
     "@types/react": "^18.2.29",

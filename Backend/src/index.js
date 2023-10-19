@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const userRoutes = require("./routes/user");
 const productRoutes = require("./routes/product");
@@ -21,6 +22,46 @@ app.use("/api", categoryRoutes);
 app.get("/", (req, res) => {
   res.send("Welcome to my API");
 });
+
+app.post("/login", (req, res) => {
+  const user = {
+    id: 1,
+    nombre: "Juan",
+    email: "ljuan648l@gmail.com",
+  };
+
+  jwt.sign({ user }, "secret", { expiresIn: "20d" }, (err, token) => {
+    res.json({
+      token,
+    });
+  });
+});
+
+app.post("/account", verifyToken, (req, res) => {
+  jwt.verify(req.token, "secret", (err, authData) => {
+    if (err) {
+      res.sendStatus(403);
+    } else {
+      res.json({
+        message: "User authorizated",
+        authData,
+      });
+    }
+  });
+});
+
+// Authorization : Bearer <token>
+function verifyToken(req, res, next) {
+  const bearerHeader = req.headers["authorization"];
+
+  if (typeof bearerHeader !== "undefined") {
+    const bearerToken = bearerHeader.split(" ")[1];
+    req.token = bearerToken;
+    next();
+  } else {
+    res.sendStatus(403);
+  }
+}
 
 //Mongodb connection
 mongoose

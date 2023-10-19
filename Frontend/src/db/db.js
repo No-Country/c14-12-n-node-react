@@ -1,4 +1,4 @@
-const api = "category";
+const api = "users";
 
 const database = fetch(`http://localhost:4000/api/${api}`)
   .then((res) => res.json())
