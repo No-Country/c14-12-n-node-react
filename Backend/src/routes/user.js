@@ -9,12 +9,16 @@ const router = express.Router();
 router.post("/register", async (req, res) => {
   const { name, email, password } = req.body;
   try {
+    const userExist = await userSchema.findOne({ email });
+    if (userExist)
+      return res.status(400).json({ message: "Email already exist" });
     const passwordHash = await bcrypt.hash(password, 10);
     const user = new userSchema({
       name,
       email,
       password: passwordHash,
     });
+
     user.save();
 
     const token = await createAccessToken({ id: user._id });

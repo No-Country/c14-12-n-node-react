@@ -23,20 +23,6 @@ app.get("/", (req, res) => {
   res.send("Welcome to my API");
 });
 
-/*
-app.post("/api/login", (req, res) => {
-  const { email, password } = req.body;
-  //res.send(`${email}, ${password}`);
-
-  const user = email;
-
-  jwt.sign({ user }, "secret", { expiresIn: "20d" }, (err, token) => {
-    res.json({
-      token,
-    });
-  });
-});
-*/
 app.post("/account", verifyToken, (req, res) => {
   jwt.verify(req.token, "secret", (err, authData) => {
     if (err) {
