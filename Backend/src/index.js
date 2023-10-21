@@ -23,12 +23,12 @@ app.get("/", (req, res) => {
   res.send("Welcome to my API");
 });
 
-app.post("/login", (req, res) => {
-  const user = {
-    id: 1,
-    nombre: "Juan",
-    email: "ljuan648l@gmail.com",
-  };
+/*
+app.post("/api/login", (req, res) => {
+  const { email, password } = req.body;
+  //res.send(`${email}, ${password}`);
+
+  const user = email;
 
   jwt.sign({ user }, "secret", { expiresIn: "20d" }, (err, token) => {
     res.json({
@@ -36,7 +36,7 @@ app.post("/login", (req, res) => {
     });
   });
 });
-
+*/
 app.post("/account", verifyToken, (req, res) => {
   jwt.verify(req.token, "secret", (err, authData) => {
     if (err) {
