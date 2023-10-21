@@ -1,15 +1,13 @@
-import Carousel from "../components/Carousel";
+import Carousels from "../components/Carousels";
 import Products from "../components/Products";
+import MostrarTodoMenu from "../components/MostrarTodoMenu";
 
 const Home = () => {
   return (
     <>
-      <div>
-        <Carousel />
-      </div>
-      <div>
-        <Products />
-      </div>
+      <Carousels className="carousel" />
+      <MostrarTodoMenu />
+      <Products />
     </>
   );
 };

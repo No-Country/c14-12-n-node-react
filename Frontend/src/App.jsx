@@ -7,7 +7,6 @@ import Service from "./pages/Service";
 // import { useState } from "react";
 // import Admin from "./pages/Admin";
 
-
 function App() {
   // const [auth, setAuth] = useState(false);
 
@@ -25,7 +24,7 @@ function App() {
             <Route path="/admin" exact element={<Admin />} />
           ) : ( */}
         </Routes>
-        {/* <Footer />  */}
+        {/* <Footer /> */}
       </Router>
     </>
   );
