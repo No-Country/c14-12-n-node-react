@@ -6,9 +6,7 @@ function createAccessToken(payload) {
       payload,
       process.env.TOKEN_SECRET,
       { expiresIn: "20d" },
-      (err, token) => {
-        err ? reject(err) : resolve(token);
-      }
+      (err, token) => (err ? reject(err) : resolve(token))
     );
   });
 }
