@@ -1,21 +1,15 @@
-import { Nav } from "reactstrap";
-import { NavItem } from "reactstrap";
-import { NavLink } from "reactstrap";
+import { Nav, NavItem, NavLink } from "reactstrap";
 
 function MostrarTodoMenu() {
   return (
-    <>
-      <div className="d-inline fs-2">
-        <Nav >
-          <NavItem>
-            Los mas elegidos
-            <NavLink disabled href="/">
-              Ver Todos
-            </NavLink>
-          </NavItem>
-        </Nav>
-      </div>
-    </>
+    <Nav className="d-flex justify-content-start align-items-center">
+      <NavItem className="p-2 fs-4">Los mas elegidos</NavItem>
+      <NavItem>
+        <NavLink className="fs-4" disabled href="/">
+          Ver Todos
+        </NavLink>
+      </NavItem>
+    </Nav>
   );
 }
 

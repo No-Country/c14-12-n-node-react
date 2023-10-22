@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "../styles/Header.css";
+import "../styles/Navbar.css";
 
 function NavBar() {
   const [hidePlaceholder, setHidePlaceholder] = useState(false);
@@ -19,8 +19,9 @@ function NavBar() {
             className="img-logo"
           />
         </div>
-        <div className="input-buscador ">
+        <div className="input-wrapper">
           <input
+            className="input-buscador"
             type="search"
             id="buscador"
             name="buscador"

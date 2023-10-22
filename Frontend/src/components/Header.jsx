@@ -2,9 +2,7 @@ import TopBar from "./TopBar";
 import NavBar from "./NavBar";
 import Menu from "./Menu";
 
-
 const Header = () => {
-  
   return (
     <>
       <TopBar />
@@ -15,4 +13,3 @@ const Header = () => {
 };
 
 export default Header;
-

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Product from "../components/Product";
 import { getAll } from "../Services/productosServices";
 import Spinner from "react-bootstrap/Spinner";
+import "../styles/MostrarTodoMenu.css";
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -27,7 +28,7 @@ function Products() {
       </div>
     );
   } else {
-    // Limit the number of products to 4
+    // limita la cantidad de tarjetas a 4
     const limitedProducts = products.slice(0, 4);
 
     return (
@@ -35,9 +36,10 @@ function Products() {
         className="container"
         style={{
           display: "flex",
-          width: "1333px",
-          height: "511px",
-          gap: "24px",
+          justifyContent: "center",
+          width: "100%",
+          height: "639px",
+          gap: "80px",
         }}
       >
         {limitedProducts.map((product) => (

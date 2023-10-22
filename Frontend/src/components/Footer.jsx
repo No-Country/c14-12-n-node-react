@@ -1,5 +1,5 @@
-import "../styles/Footer.css";
 import { FaFacebookSquare, FaInstagram, FaWhatsappSquare, FaTiktok, FaEnvelope } from 'react-icons/fa';
+import "../styles/Footer.css";
 
 function Footer() {
   return (

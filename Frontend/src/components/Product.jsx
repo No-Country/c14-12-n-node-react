@@ -2,7 +2,6 @@
 import CardBody from "reactstrap/lib/CardBody";
 import Card from "reactstrap/lib/Card";
 import CardTitle from "reactstrap/lib/CardTitle";
-import CardSubtitle from "reactstrap/lib/CardSubtitle";
 import CardText from "reactstrap/lib/CardText";
 import Button from "reactstrap/lib/Button";
 import Col from "react-bootstrap/Col";
@@ -12,24 +11,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function Product({ name, price, quantity, image }) {
   return (
     <Col
-      sm="3"
-      style={{
-        marginBottom: "15px",
-        width: "291px",
-        height: "511px",
-        padding: "0 0 16px 0",
-        borderRadius: "8px",
-        gap: "19px",
-      }}
+      sm="2"
+      
     >
-      <Row
-        style={{
-          width: "291px",
-          height: "511px",
-          padding: "0px, 0px, 16px, 0px",
-          radius: "8px",
-          gap: "19px",
-        }}
+      <Row style={{
+           width: "291px",
+           height: "511px",
+           padding: "0px, 0px, 16px, 0px",
+           radius: "8px",
+           gap: "20px",
+         }}
+         
       >
         <Card color="light">
           <img
