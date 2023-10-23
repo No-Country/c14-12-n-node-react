@@ -5,6 +5,7 @@ require("dotenv").config();
 const userRoutes = require("./routes/user");
 const productRoutes = require("./routes/product");
 const categoryRoutes = require("./routes/category");
+const orderRoutes = require("./routes/order");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 
@@ -19,13 +20,14 @@ app.use(cookieParser());
 app.use("/api", userRoutes);
 app.use("/api", productRoutes);
 app.use("/api", categoryRoutes);
-//app.use("/api", adminRoutes);
+app.use("/api", orderRoutes);
 
 //routes
 app.get("/", (req, res) => {
   res.send("Welcome to my API");
 });
 
+/*
 app.post("/account", verifyToken, (req, res) => {
   jwt.verify(req.token, "secret", (err, authData) => {
     if (err) {
@@ -51,6 +53,7 @@ function verifyToken(req, res, next) {
     res.sendStatus(403);
   }
 }
+*/
 
 //Mongodb connection
 mongoose
