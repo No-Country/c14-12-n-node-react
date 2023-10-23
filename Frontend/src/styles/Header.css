@@ -74,9 +74,11 @@ button {
 }
 
 .submenu {
+  display: flex;
   width: 97px;
   height: 24px;
   gap: 4px;
+  cursor: pointer;
 }
 
 #link {

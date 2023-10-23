@@ -3,17 +3,29 @@ import { NavLink } from "react-router-dom";
 import TopBar from "./TopBar";
 import NavBar from "./Navbar";
 import "../styles/Header.css";
+import Login from "./Login";
 
-const Header = () => {
+const Header = (props) => {
   const [hidePlaceholder, setHidePlaceholder] = useState(false);
+  const [loginActive, setLoginActive] = useState(false);
 
   const handleInputChange = (e) => {
     const inputValue = e.target.value;
     setHidePlaceholder(inputValue.length > 0);
   };
 
+  const toggleClass = () => {
+    setLoginActive(!loginActive);
+  };
+
   return (
     <>
+      {loginActive ? (
+        <Login loginActive={loginActive} toggleClass={toggleClass} />
+      ) : (
+        <></>
+      )}
+      <Login loginActive={loginActive} toggleClass={toggleClass} />
       <TopBar />
       <header className="encabezado">
         <div className="menu-izq">
@@ -41,11 +53,9 @@ const Header = () => {
           </ul>
         </div>
         <nav className="menu-derecho">
-          <div className="submenu">
+          <div className="submenu" onClick={toggleClass}>
             <img src="./src/img/user-regular-24.png" alt="user" />
-            <NavLink id="link" to="/login">
-              Ingresa
-            </NavLink>
+            <p id="link">Ingresa</p>
           </div>
           <div className="submenu">
             <img src="./src/img/cart-alt-regular-24.png" alt="cart" />
@@ -55,8 +65,8 @@ const Header = () => {
           </div>
         </nav>
       </header>
-      <NavBar /> 
-        </>
+      <NavBar />
+    </>
   );
 };
 
