@@ -6,7 +6,8 @@ function Menu() {
     <nav>
       <div className="container">
         <div className="menu">
-          <NavLink to="/">Belleza</NavLink>
+          <NavLink to="/belleza">Belleza</NavLink>
+          
           <NavLink to="/link2">Cuidados Personal</NavLink>
           <NavLink to="/link3">Ofertas</NavLink>
         </div>

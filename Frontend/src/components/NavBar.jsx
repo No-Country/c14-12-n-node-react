@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
 
 function NavBar() {
@@ -13,11 +13,13 @@ function NavBar() {
     <header className="encabezado">
       <div className="menu-izq">
         <div>
+          <Link to ="/">
           <img
             src="/src/assets/Logo_Marlui-removebg-preview 1.png"
             alt="Logo"
             className="img-logo"
-          />
+            />
+          </Link>
         </div>
         <div className="input-wrapper">
           <input
