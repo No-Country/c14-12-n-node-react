@@ -1,25 +1,14 @@
 import { useState } from "react";
-import "../styles/Login.css";
-import "./Header";
-import Register from "./Register";
 
-const Login = (props) => {
-  const loginActive = props.loginActive;
-  const toggleClass = props.toggleClass;
-  const [register, setRegister] = useState(false);
-
-  const toggleRegister = () => {
-    setRegister(!register);
-  };
-
+const Register = () => {
   return (
     <>
-      <div className={`container-login ${loginActive ? "login" : ""}`}>
+      <div className={`container-register `}>
         <img
           className="close"
           src="close.svg"
           alt="close"
-          onClick={toggleClass}
+          //onClick={toggleClass}}
         />
         <form className="login-form">
           <ul className="login-list">
@@ -47,4 +36,4 @@ const Login = (props) => {
   );
 };
 
-export default Login;
+export default Register;
