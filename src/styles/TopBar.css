@@ -1,0 +1,33 @@
+.contenido-topbar {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: Fixed (1, 728px);
+  height: Fixed (74px);
+  padding: 9px, 201px, 9px, 201px;
+  gap: 278px;
+}
+
+h2 {
+  
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.contenido-envios {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon-topbar {
+  margin: 1rem;
+}
+
+strong {
+  font-size: 20px;
+  line-height: 30px;
+}
