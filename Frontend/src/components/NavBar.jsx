@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import Login from "./Login";
+import Register from "./Register";
 import "../styles/Navbar.css";
 
 function NavBar() {
@@ -11,27 +12,44 @@ function NavBar() {
   };
 
   const [loginActive, setLoginActive] = useState(false);
+  const [register, setRegister] = useState(false);
 
   const toggleClass = () => {
     setLoginActive(!loginActive);
   };
 
+  const toggleRegister = (num) => {
+    toggleClass();
+    setRegister(!register);
+  };
+
   return (
     <>
       {loginActive ? (
-        <Login loginActive={loginActive} toggleClass={toggleClass} />
+        <Login
+          loginActive={loginActive}
+          toggleClass={toggleClass}
+          toggleRegister={toggleRegister}
+        />
       ) : (
         <></>
       )}
-      
+      {register ? (
+        <Register register={register} toggleRegister={toggleRegister} />
+      ) : (
+        <></>
+      )}
+
       <header className="encabezado">
         <div className="menu-izq">
           <div>
-            <img
-              src="/src/assets/Logo_Marlui-removebg-preview 1.png"
-              alt="Logo"
-              className="img-logo"
-            />
+            <Link to="/">
+              <img
+                src="/src/assets/Logo_Marlui-removebg-preview 1.png"
+                alt="Logo"
+                className="img-logo"
+              />
+            </Link>
           </div>
           <ul>
             <div className="buscador-header">

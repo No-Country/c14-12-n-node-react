@@ -11,8 +11,8 @@
   left: 50%;
   z-index: 1;
   background-color: rgb(240, 248, 255);
-  width: 40rem;
-  height: 80vh;
+  width: 50rem;
+  height: 90vh;
   transform: translate(-50%, -50%);
   border-radius: 2rem;
   font-size: 2.4rem;
@@ -25,4 +25,43 @@
   position: absolute;
   top: 0;
   right: 0;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  margin: 2rem auto 0;
+}
+
+.register-list__items {
+  margin-top: 1rem;
+}
+
+.register-list__items label {
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+.register-list__items input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border-color: rgba(185, 183, 183, 0.842);
+  border-radius: 1.4rem;
+}
+
+.register-buttonfirst,
+.register-buttonsecond {
+  width: 100%;
+  border-radius: 1.4rem;
+}
+
+.register-buttonsecond {
+  background-color: white;
+  border: 1px solid #eda415;
+  color: #eda415;
+
+  &:hover {
+    color: white;
+  }
 }
