@@ -8,6 +8,7 @@ import Login from "./Login";
 const Header = (props) => {
   const [hidePlaceholder, setHidePlaceholder] = useState(false);
   const [loginActive, setLoginActive] = useState(false);
+  const [register, setRegister] = useState(false);
 
   const handleInputChange = (e) => {
     const inputValue = e.target.value;
@@ -16,6 +17,10 @@ const Header = (props) => {
 
   const toggleClass = () => {
     setLoginActive(!loginActive);
+  };
+
+  const toggleRegister = () => {
+    setRegister(!register);
   };
 
   return (
