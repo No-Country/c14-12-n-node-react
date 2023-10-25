@@ -24,8 +24,9 @@ const userSchema = mongoose.Schema({
   },
   admin: {
     type: Boolean,
+    default: false,
     required: false,
-  }
+  },
 });
 
-module.exports = mongoose.model("users", userSchema);
+module.exports = mongoose.model("User", userSchema);
