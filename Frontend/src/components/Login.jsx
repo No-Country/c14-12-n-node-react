@@ -1,7 +1,8 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
 import "../styles/Login.css";
 import "./Header";
 import Register from "./Register";
+import { useState } from "react";
 
 const Login = (props) => {
   const loginActive = props.loginActive;
@@ -27,7 +28,7 @@ const Login = (props) => {
               <img className="logo" src="/Logo2.png" alt="Logo" />
             </li>
             <li className="login-list__items">
-              <label htmlFor="mail">Correo Electronico</label>
+              <label>Correo Electronico</label>
               <input type="text" id="mail" />
             </li>
             <li className="login-list__items">
