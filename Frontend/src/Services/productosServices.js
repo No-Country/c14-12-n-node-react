@@ -1,6 +1,6 @@
 export async function getAll() {
   //GET por productos
-   return await fetch(`https://marlui-map4che.koyeb.app/api/).then((res)=>
+   return await fetch(`https://marlui-map4che.koyeb.app/api/product).then((res)=>
     // return await fetch(`http://localhost:4000/api/product`).then((res) =>
        res.json()
     );
