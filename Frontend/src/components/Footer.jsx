@@ -3,25 +3,6 @@ import { FaFacebookSquare, FaInstagram, FaWhatsappSquare, FaTiktok, FaEnvelope }
 
 
 
-// function Footer() {
-//   return (
-//     <footer className="pie-de-pagina" >
-//       <div className="copyright">
-//         © 2023 Todos los derechos reservados - c14-12-n-node-react
-//       </div>
-//       <div className="social-icons">
-//         <a className="enlaces-social-icons" href="#"><FaFacebookSquare /></a>
-//         <a className="enlaces-social-icons" href="#"><FaInstagram /></a>
-//         <a className="enlaces-social-icons" href="#"><FaTimesCircle /></a>
-//         <a className="enlaces-social-icons" href="#"><FaWhatsappSquare /></a>
-//         <a className="enlaces-social-icons" href="#"><FaEnvelope /></a>
-//       </div>
-//     </footer>
-//   );
-// }
-// export default Footer;
-
-// import React from 'react';
 
 function Footer() {
   return (

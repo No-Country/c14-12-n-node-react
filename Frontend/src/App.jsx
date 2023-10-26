@@ -1,8 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
 import Home from "./pages/Home";
 import Service from "./pages/Service";
-import Footer from "./components/Footer";
 import { database } from "./db/db";
 import { useState } from "react";
 import Admin from "./pages/Admin";
@@ -13,12 +11,14 @@ function App() {
   const verify = () => {
     const auth = database.setAuth(prop.auth);
   };
+
   return (
     <>
       <Router>
-        <Header />
         <Routes>
-          <Route path="/" exact element={<Home />} />
+       
+          {/* Route siguiente hacia Admin. luego de las pruebas pasar nuevamente a Home */}
+          <Route path="/" exact element={<Home />} /> 
           <Route path="/service" exact element={<Service />} />
 
           {auth ? (
@@ -26,11 +26,11 @@ function App() {
           ) : (
             <Route path="/" exact element={<Home />} />
           )}
+       
         </Routes>
-        <Footer />
       </Router>
     </>
-  );
+  )
 }
 
 export default App;
