@@ -1,17 +1,22 @@
 const express = require("express");
 const productSchema = require("../models/product");
+const authRequerid = require("../middlewares/validateTokenAdmin");
 
 const router = express.Router();
 
 //Create producto
-router.post("/product", (req, res) => {
-  const product = productSchema(req.body);
-  product
-    .save()
-    .then(() => {
-      res.json({ message: "Product created succesfully" });
-    })
-    .catch((err) => res.json({ message: "An error has happened" }));
+router.post("/product", authRequerid, (req, res) => {
+  if (req.admin) {
+    const product = productSchema(req.body);
+    product
+      .save()
+      .then(() => {
+        res.json({ message: "Product created succesfully" });
+      })
+      .catch((err) => res.json({ message: "An error has happened" }));
+  } else {
+    res.status(401).json({ message: "User not authorizated" });
+  }
 });
 
 //Get all products
@@ -36,25 +41,33 @@ router.get("/product/:id", (req, res) => {
 });
 
 //Update a product
-router.put("/product/:id", (req, res) => {
-  const { id } = req.params;
-  const { name, price, quantity } = req.body;
-  productSchema
-    .updateOne({ _id: id }, { $set: { name, price, quantity } })
-    .then((data) => {
-      res.json({ message: "Product updated" });
-    })
-    .catch((err) => res.json({ message: err.message }));
+router.put("/product/:id", authRequerid, (req, res) => {
+  if (req.admin) {
+    const { id } = req.params;
+    const { name, price, quantity } = req.body;
+    productSchema
+      .updateOne({ _id: id }, { $set: { name, price, quantity } })
+      .then((data) => {
+        res.json({ message: "Product updated" });
+      })
+      .catch((err) => res.json({ message: err.message }));
+  } else {
+    res.status(401).json({ message: "User not authorizated" });
+  }
 });
 
 //Remove product
-router.delete("/product/:id", (req, res) => {
-  const { id } = req.params;
-  productSchema
-    .findByIdAndRemove(id)
-    .then((data) => {
-      res.json({ message: "Product removed" });
-    })
-    .catch((err) => res.json({ message: err.message }));
+router.delete("/product/:id", authRequerid, (req, res) => {
+  if (req.admin) {
+    const { id } = req.params;
+    productSchema
+      .findByIdAndRemove(id)
+      .then((data) => {
+        res.json({ message: "Product removed" });
+      })
+      .catch((err) => res.json({ message: err.message }));
+  } else {
+    res.status(401).json({ message: "User not authorizated" });
+  }
 });
 module.exports = router;
