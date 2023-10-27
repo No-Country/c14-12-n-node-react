@@ -15,7 +15,6 @@ function NavBar() {
     setLoginActive(!loginActive);
   };
 
-
   return (
     <>
       {loginActive ? (
@@ -50,6 +49,7 @@ function NavBar() {
             </button>
           </div>
         </div>
+
         <nav className="menu-derecho">
           <div className="submenu" onClick={toggleClass}>
             <img src="./src/img/user-regular-24.png" alt="user" />
