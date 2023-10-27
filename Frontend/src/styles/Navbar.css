@@ -75,6 +75,8 @@
 }
 
 .submenu {
+  display: flex;
+  justify-content: center;
   width: 97px;
   height: 24px;
   gap: 4px;
