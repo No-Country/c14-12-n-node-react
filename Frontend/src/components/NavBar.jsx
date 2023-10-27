@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import Login from "./Login";
+import Register from "./Register";
 import "../styles/Navbar.css";
 
 function NavBar() {
@@ -10,18 +11,34 @@ function NavBar() {
     setHidePlaceholder(inputValue.length > 0);
   };
   const [loginActive, setLoginActive] = useState(false);
+  const [register, setRegister] = useState(false);
 
   const toggleClass = () => {
     setLoginActive(!loginActive);
   };
 
+  const toggleRegister = (num) => {
+    toggleClass();
+    setRegister(!register);
+  };
+
   return (
     <>
       {loginActive ? (
-        <Login loginActive={loginActive} toggleClass={toggleClass} />
+        <Login
+          loginActive={loginActive}
+          toggleClass={toggleClass}
+          toggleRegister={toggleRegister}
+        />
       ) : (
         <></>
       )}
+      {register ? (
+        <Register register={register} toggleRegister={toggleRegister} />
+      ) : (
+        <></>
+      )}
+
       <header className="encabezado">
         <div className="menu-izq">
           <div>
