@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Login from "./Login";
 import "../styles/Navbar.css";
 
@@ -9,12 +9,12 @@ function NavBar() {
     const inputValue = e.target.value;
     setHidePlaceholder(inputValue.length > 0);
   };
-
   const [loginActive, setLoginActive] = useState(false);
 
   const toggleClass = () => {
     setLoginActive(!loginActive);
   };
+
 
   return (
     <>
@@ -23,31 +23,32 @@ function NavBar() {
       ) : (
         <></>
       )}
-      
       <header className="encabezado">
         <div className="menu-izq">
           <div>
-            <img
-              src="/src/assets/Logo_Marlui-removebg-preview 1.png"
-              alt="Logo"
-              className="img-logo"
-            />
-          </div>
-          <ul>
-            <div className="buscador-header">
-              <input
-                className="input-buscador"
-                type="search"
-                id="buscador"
-                name="buscador"
-                placeholder={
-                  hidePlaceholder ? "" : "Busca por producto, marca o categoría"
-                }
-                onChange={handleInputChange}
+            <Link to="/">
+              <img
+                src="/src/assets/Logo_Marlui-removebg-preview 1.png"
+                alt="Logo"
+                className="img-logo"
               />
-              <button type="submit">Buscar</button>
-            </div>
-          </ul>
+            </Link>
+          </div>
+          <div className="input-wrapper">
+            <input
+              className="input-buscador"
+              type="search"
+              id="buscador"
+              name="buscador"
+              placeholder={
+                hidePlaceholder ? "" : "Busca por producto, marca o categoría"
+              }
+              onChange={handleInputChange}
+            />
+            <button className="btn_Search" type="submit">
+              Buscar
+            </button>
+          </div>
         </div>
         <nav className="menu-derecho">
           <div className="submenu" onClick={toggleClass}>
