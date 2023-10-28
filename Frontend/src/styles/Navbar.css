@@ -107,7 +107,9 @@
   display: flex;
   align-items: center;
   text-align: center;
-  width: calc(60% - 132px); /* Ajusta el ancho para dejar espacio para el botón */
+  width: calc(
+    60% - 132px
+  ); /* Ajusta el ancho para dejar espacio para el botón */
   height: 93.5px;
   gap: 116px; /* Cambiado para ajustar el espacio entre el logo y el input */
   margin-left: 20px; /* Ajusta el margen izquierdo para centrar */
@@ -126,7 +128,7 @@
 
 .input-buscador {
   background-color: white;
-  width: 508px; 
+  width: 508px;
   height: 56px;
   border-radius: 20px;
   padding: 0px 20px 0px 25px;
@@ -179,4 +181,14 @@
   font-size: 16px;
   text-align: center;
   margin-left: 6px;
+}
+
+.logout-button {
+  color: white;
+  font-size: 1.8rem;
+  margin-left: 5rem;
+  cursor: pointer;
+  &:hover {
+    color: orange;
+  }
 }

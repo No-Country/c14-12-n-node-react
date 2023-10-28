@@ -4,30 +4,44 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Belleza from "./pages/Belleza";
-// import { database } from "./db/db";
-// import { useState } from "react";
-// import Admin from "./pages/Admin";
+
+import ProtectedRoute from "./pages/ProtectedRoute";
+
+import { useState } from "react";
+import Admin from "./pages/Admin";
+import { AuthProvider } from "./context/AuthContext";
+import Profile from "./pages/Profile";
+import ProtectedRouteAdmin from "./pages/ProtectedRouteAdmin";
+import Login from "./pages/LoginPage";
 
 function App() {
-  // const [auth, setAuth] = useState(false);
+  const [auth, setAuth] = useState(true);
 
   // const verify = (state) => {
   //    setAuth(prop.auth);
   //  };
   return (
     <>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          {/* <Route path="/service" exact element={<Service />} /> */}
-          {/* {auth ? (
-            <Route path="/admin" exact element={<Admin />} />
-          ) : ( */}
-          <Route path="/belleza" exact element={<Belleza />} />
-        </Routes>
-        <Footer />
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Header />
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/login" exact element={<Login />} />
+            {/* <Route path="/service" exact element={<Service />} /> */}
+
+            <Route path="/belleza" exact element={<Belleza />} />
+
+            <Route element={<ProtectedRoute />}>
+              <Route path="/profile" exact element={<Profile />} />
+              <Route element={<ProtectedRouteAdmin />}>
+                <Route path="/admin" exact element={<Admin />} />
+              </Route>
+            </Route>
+          </Routes>
+          <Footer />
+        </Router>
+      </AuthProvider>
     </>
   );
 }
