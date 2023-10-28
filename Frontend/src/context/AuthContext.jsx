@@ -74,13 +74,13 @@ export const AuthProvider = ({ children }) => {
 
   const signOut = async () => {
     try {
-      const cookies = Cookies.get();
-      const res = await signOut();
+      await signOutRequest(); // Llama a la función que realiza la solicitud de cierre de sesión al servidor
       setIsAuthenticated(false);
       setUser(null);
       setIsAdmin(false);
       setName("");
-      cookies.token = "";
+
+      Cookies.remove("token");
     } catch (err) {
       console.log(err);
     }
