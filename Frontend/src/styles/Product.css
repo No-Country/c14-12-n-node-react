@@ -1,0 +1,9 @@
+.Cards {
+  display: "flex";
+  align-items: center;
+  width: 1333px;
+  height:639px;
+  top: 734px;
+  left: 197px;
+  gap: 80px;
+}

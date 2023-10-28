@@ -5,38 +5,37 @@ require("dotenv").config();
 const userRoutes = require("./routes/user");
 const productRoutes = require("./routes/product");
 const categoryRoutes = require("./routes/category");
+const orderRoutes = require("./routes/order");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
+// const allowCors = require("./middlewares/allowCors");
 
 const app = express();
 const port = process.env.PORT || 4000;
 
 //middleware
 app.use(express.json({ extended: true }));
-app.use(cors());
+app.use(
+  // allowCors
+  cors({
+    origin: "http://localhost:5173",
+    //origin:"https://c14-12-n-node-react.vercel.app/"
+    credentials: true,
+  })
+);
+app.use(cookieParser());
 
 app.use("/api", userRoutes);
 app.use("/api", productRoutes);
 app.use("/api", categoryRoutes);
+app.use("/api", orderRoutes);
 
 //routes
 app.get("/", (req, res) => {
   res.send("Welcome to my API");
 });
 
-app.post("/login", (req, res) => {
-  const user = {
-    id: 1,
-    nombre: "Juan",
-    email: "ljuan648l@gmail.com",
-  };
-
-  jwt.sign({ user }, "secret", { expiresIn: "20d" }, (err, token) => {
-    res.json({
-      token,
-    });
-  });
-});
-
+/*
 app.post("/account", verifyToken, (req, res) => {
   jwt.verify(req.token, "secret", (err, authData) => {
     if (err) {
@@ -62,6 +61,7 @@ function verifyToken(req, res, next) {
     res.sendStatus(403);
   }
 }
+*/
 
 //Mongodb connection
 mongoose

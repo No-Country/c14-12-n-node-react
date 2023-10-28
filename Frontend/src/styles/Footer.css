@@ -9,6 +9,8 @@
   background-color: #633974;
   padding: 4rem;
   font-size: 1.6rem;
+  position: static;
+  bottom: 0;
 }
 
 .politicas-footer {
@@ -17,7 +19,6 @@
   align-items: start;
   text-align: center;
   margin-left: 0;
-
 }
 
 .contenido-politicas {
@@ -30,7 +31,7 @@
   color: white;
 }
 
-.sociales-footer {  
+.sociales-footer {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -55,8 +56,6 @@ h4 {
   margin-bottom: 3.5rem;
 }
 
-
-
 .social-media-icon {
   display: flex;
   flex-direction: column;
@@ -64,7 +63,7 @@ h4 {
   align-items: center;
 }
 
-.enlaces-social-icons { 
+.enlaces-social-icons {
   color: white;
   font-size: 3rem;
   margin: 4rem;

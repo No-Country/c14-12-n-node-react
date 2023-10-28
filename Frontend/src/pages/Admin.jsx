@@ -30,7 +30,7 @@ margin-top: 3rem;
 const Admin = () => {
   return (
     <>
-    <HeaderAdministrador/>
+    {/* <HeaderAdministrador/> */}
     <StyledContainerTitle>
     <StyledTitle>Hola Marlui !!</StyledTitle>
     <StyledSubTitle>Todas las tareas que necesitas realizar, están acá:</StyledSubTitle>
