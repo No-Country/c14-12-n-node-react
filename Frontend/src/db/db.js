@@ -1,7 +1,7 @@
 const api = "users";
 
-// const database = fetch(`https://marlui-map4che.koyeb.app/api/${api}`)
-const database = fetch(`http://localhost:4000/api/${api}`)
+const database = fetch(`https://marlui-map4che.koyeb.app/api/${api}`)
+//const database = fetch(`http://localhost:4000/api/${api}`)
   .then((res) => res.json())
   .then((res) => console.log(res));
 

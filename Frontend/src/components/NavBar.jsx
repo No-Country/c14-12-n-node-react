@@ -10,7 +10,6 @@ function NavBar() {
     const inputValue = e.target.value;
     setHidePlaceholder(inputValue.length > 0);
   };
-
   const [loginActive, setLoginActive] = useState(false);
   const [register, setRegister] = useState(false);
 
@@ -51,22 +50,23 @@ function NavBar() {
               />
             </Link>
           </div>
-          <ul>
-            <div className="buscador-header">
-              <input
-                className="input-buscador"
-                type="search"
-                id="buscador"
-                name="buscador"
-                placeholder={
-                  hidePlaceholder ? "" : "Busca por producto, marca o categoría"
-                }
-                onChange={handleInputChange}
-              />
-              <button type="submit">Buscar</button>
-            </div>
-          </ul>
+          <div className="input-wrapper">
+            <input
+              className="input-buscador"
+              type="search"
+              id="buscador"
+              name="buscador"
+              placeholder={
+                hidePlaceholder ? "" : "Busca por producto, marca o categoría"
+              }
+              onChange={handleInputChange}
+            />
+            <button className="btn_Search" type="submit">
+              Buscar
+            </button>
+          </div>
         </div>
+
         <nav className="menu-derecho">
           <div className="submenu" onClick={toggleClass}>
             <img src="./src/img/user-regular-24.png" alt="user" />
