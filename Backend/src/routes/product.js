@@ -29,6 +29,18 @@ router.get("/product", (req, res) => {
     .catch((err) => res.json({ message: err.message }));
 });
 
+//Get sales
+router.get("/sales", (req, res) => {
+  productSchema
+    .find({ sales: true })
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((error) => {
+      res.status(500).json(["Error in this counsult"]);
+    });
+});
+
 //Get one product
 router.get("/product/:id", (req, res) => {
   const { id } = req.params;
