@@ -1,4 +1,4 @@
-import HeaderAdministrador from "../components/Header_Admin";
+// import HeaderAdministrador from "../components/Header_Admin";
 import MyPanel from "../components/Panel_Admin";
 import styled from "styled-components"
 
