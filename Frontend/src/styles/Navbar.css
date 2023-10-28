@@ -17,7 +17,7 @@
   ); /* Ajusta el ancho para dejar espacio para el botón */
   height: 93.5px;
   gap: 116px; /* Cambiado para ajustar el espacio entre el logo y el input */
-  margin-left: 20px; /* Ajusta el margen izquierdo para centrar */
+  margin-left: 116px; /* Ajusta el margen izquierdo para centrar */
 }
 
 .img-logo {
