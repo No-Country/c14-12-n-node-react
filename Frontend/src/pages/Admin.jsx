@@ -1,39 +1,43 @@
-import "../styles/Admin.css";
+// import HeaderAdministrador from "../components/Header_Admin";
+import MyPanel from "../components/Panel_Admin";
+import styled from "styled-components"
+
+
+
+const StyledContainerTitle = styled.div`
+display: flex;
+flex-direction: column;
+text-aling: center;
+aling-itens: center;
+padding: 3rem;
+margin-top: 3rem;
+margin-left: 30rem;
+width:100rem;
+`;
+
+const StyledTitle = styled.h1`
+color: black;
+display: flex;
+justify-content: left;
+`;
+
+const StyledSubTitle = styled.h3`
+color: black;
+margin-top: 3rem;
+`;
+
 
 const Admin = () => {
   return (
     <>
-      <h1 className="admin-title">Administrando</h1>
-      <div className="container">
-        <form className="admin-form">
-          <label htmlFor="">Nombre</label>
-          <input type="text" />
-          <label htmlFor="">Categoria</label>
-          <input type="text" />
-          <label htmlFor="">Precio</label>
-          <input type="text" />
-          <label htmlFor="">Cantidad</label>
-          <input type="text" />
-          <button className="admin-button" type="submit">
-            Crear
-          </button>
-        </form>
-        <form className="admin-form">
-          <label htmlFor="">Nombre</label>
-          <input type="text" />
-          <label htmlFor="">Categoria</label>
-          <input type="text" />
-          <label htmlFor="">Precio</label>
-          <input type="text" />
-          <label htmlFor="">Cantidad</label>
-          <input type="text" />
-          <button className="admin-button" type="submit">
-            Crear
-          </button>
-        </form>
-      </div>
+    {/* <HeaderAdministrador/> */}
+    <StyledContainerTitle>
+    <StyledTitle>Hola Marlui !!</StyledTitle>
+    <StyledSubTitle>Todas las tareas que necesitas realizar, están acá:</StyledSubTitle>
+    </StyledContainerTitle>
+    <MyPanel/>      
     </>
   );
-};
+}
 
 export default Admin;

@@ -10,14 +10,13 @@
 
 .menu-izq {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  width: calc(
-    60% - 132px
-  ); /* Ajusta el ancho para dejar espacio para el botón */
+  width: 710.31px;
   height: 93.5px;
-  gap: 116px; /* Cambiado para ajustar el espacio entre el logo y el input */
-  margin-left: 116px; /* Ajusta el margen izquierdo para centrar */
+  gap: 116px;
+  margin-left: 116px;
 }
 
 .img-logo {
@@ -25,29 +24,18 @@
   height: 93.5px;
 }
 
-.input-wrapper {
+.buscador-header {
   display: flex;
   align-items: center;
-  position: relative;
-}
-
-.input-buscador {
+  gap: 10px;
   background-color: white;
   width: 508px;
   height: 56px;
   border-radius: 20px;
-  padding: 0px 20px 0px 25px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
-  letter-spacing: 0em;
-  border: none;
-  text-align: left;
-  background-color: white;
-  border-radius: 20px;
+  padding: 0px, 0px, 0px, 25px;
 }
 
-.btn_Search {
+.button-header-comprador {
   width: 132px;
   height: 56px;
   border-radius: 20px;
@@ -56,15 +44,25 @@
   color: white;
   cursor: pointer;
   font-size: 20px;
-  position: absolute;
-  right: 0;
-  top: 0;
   &:hover {
     background-color: #e65d0e;
     font-weight: 600;
     font-size: 20px;
     line-height: 30px;
   }
+}
+
+.input-buscador {
+  flex: 1;
+  width: 100%;
+  height: 21px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  padding: 10px;
+  border: none;
+  text-align: left;
 }
 
 .menu-derecho {
@@ -77,10 +75,10 @@
 
 .submenu {
   display: flex;
-  justify-content: center;
   width: 97px;
   height: 24px;
   gap: 4px;
+  cursor: pointer;
 }
 
 #link {
@@ -90,12 +88,3 @@
   margin-left: 6px;
 }
 
-.logout-button {
-  color: white;
-  font-size: 1.8rem;
-  margin-left: 5rem;
-  cursor: pointer;
-  &:hover {
-    color: orange;
-  }
-}
