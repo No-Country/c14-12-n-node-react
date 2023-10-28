@@ -17,7 +17,7 @@ function NavBar() {
     setLoginActive(!loginActive);
   };
 
-  const toggleRegister = (num) => {
+  const toggleRegister = () => {
     toggleClass();
     setRegister(!register);
   };
