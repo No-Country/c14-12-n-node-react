@@ -1,9 +1,10 @@
 import TopBar from "./TopBar";
+import NavBar from "./NavBar";
 import Menu from "./Menu";
-import NavBar from "../components/NavBar";
-import "../styles/Header.css";
+
 
 const Header = () => {
+  
   return (
     <>
       <TopBar />
@@ -14,3 +15,4 @@ const Header = () => {
 };
 
 export default Header;
+

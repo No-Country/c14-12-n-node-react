@@ -4,8 +4,10 @@ import Products from "../components/Products";
 const Home = () => {
   return (
     <>
-      <Carousels className="carousel" />
-      <Products />
+      <div><Carousels /></div>
+      <div>
+        <Products />
+      </div>
     </>
   );
 };

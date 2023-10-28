@@ -18,6 +18,7 @@ import ErrorPage from "./pages/ErrorPage";
 function App() {
   const [auth, setAuth] = useState(true);
 
+
   // const verify = (state) => {
   //    setAuth(prop.auth);
   //  };

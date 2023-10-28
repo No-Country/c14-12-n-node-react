@@ -75,14 +75,10 @@ const Login = () => {
               )}
             </li>
             <li className="login-list__items">
-              <button className="login-buttonfirst" onClick={login}>
-                Inicio Sesion
-              </button>
+              <button className="login-buttonfirst">Inicio Sesion</button>
             </li>
             <li className="login-list__items">
-              <button className="login-buttonsecond" onClick={toggleRegister}>
-                Registrarme
-              </button>
+              <button className="login-buttonsecond">Registrarme</button>
             </li>
           </ul>
         </form>
