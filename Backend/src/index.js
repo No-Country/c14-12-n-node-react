@@ -8,6 +8,7 @@ const categoryRoutes = require("./routes/category");
 const orderRoutes = require("./routes/order");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+// const allowCors = require("./middlewares/allowCors");
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -15,6 +16,7 @@ const port = process.env.PORT || 4000;
 //middleware
 app.use(express.json({ extended: true }));
 app.use(
+  // allowCors
   cors({
     origin: "http://localhost:5173",
     //origin:"https://c14-12-n-node-react.vercel.app/"

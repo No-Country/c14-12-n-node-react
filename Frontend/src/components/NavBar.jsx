@@ -23,6 +23,7 @@ function NavBar() {
     setHidePlaceholder(inputValue.length > 0);
   };
 
+ 
   const out = () => {
     signOut();
   };
@@ -120,4 +121,5 @@ function NavBar() {
     </>
   );
 }
+
 export default NavBar;

@@ -13,6 +13,7 @@ import { AuthProvider } from "./context/AuthContext";
 import Profile from "./pages/Profile";
 import ProtectedRouteAdmin from "./pages/ProtectedRouteAdmin";
 import Login from "./pages/LoginPage";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   const [auth, setAuth] = useState(true);
@@ -28,6 +29,7 @@ function App() {
           <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="/login" exact element={<Login />} />
+            <Route path="/error" exact element={<ErrorPage />} />
             {/* <Route path="/service" exact element={<Service />} /> */}
 
             <Route path="/belleza" exact element={<Belleza />} />
@@ -43,7 +45,7 @@ function App() {
         </Router>
       </AuthProvider>
     </>
-  );
+  )
 }
 
 export default App;

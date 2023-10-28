@@ -6,12 +6,12 @@ import CardText from "reactstrap/lib/CardText";
 import Button from "reactstrap/lib/Button";
 import Col from "react-bootstrap/esm/Col";
 import PropTypes from "prop-types";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Cards({ product }){
 const { name,price,image } = product;
   return (
-    <Col xs={12} sm={6} lg={4} xxl={3}>
+    <Col >
     <Card
       color="dark"
       outline
