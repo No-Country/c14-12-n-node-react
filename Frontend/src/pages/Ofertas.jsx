@@ -28,7 +28,7 @@ const Ofertas = () => {
     );
   } else {
     // limita la cantidad de tarjetas a 4
-    const limitedProducts = products.slice(0, 4);
+    const limitedProducts = products.slice(0,3);
 
     return (
       <div
