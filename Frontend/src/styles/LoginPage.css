@@ -1,0 +1,27 @@
+.container-loginPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15rem auto;
+}
+
+.loginPage-title {
+  font-weight: 200;
+  margin-bottom: 2rem;
+}
+
+.loginPage-p {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.loginPage-p__underline {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #633974;
+  cursor: pointer;
+  &:hover {
+    color: aqua;
+  }
+}

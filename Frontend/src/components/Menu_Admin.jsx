@@ -24,8 +24,8 @@ const StyledBoton = styled.button`
 
 
 const StyledUl = styled.ul`
-position: fixed;
-top: 100px;
+position: relative;
+top: 30rem;
 left: 10px;
 bottom: 0;
 background-color: #ede9; 

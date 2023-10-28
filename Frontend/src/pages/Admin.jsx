@@ -1,4 +1,4 @@
-import HeaderAdministrador from "../components/Header_Admin";
+// import HeaderAdministrador from "../components/Header_Admin";
 import MyPanel from "../components/Panel_Admin";
 import styled from "styled-components"
 
@@ -30,7 +30,7 @@ margin-top: 3rem;
 const Admin = () => {
   return (
     <>
-    <HeaderAdministrador/>
+    {/* <HeaderAdministrador/> */}
     <StyledContainerTitle>
     <StyledTitle>Hola Marlui !!</StyledTitle>
     <StyledSubTitle>Todas las tareas que necesitas realizar, están acá:</StyledSubTitle>
