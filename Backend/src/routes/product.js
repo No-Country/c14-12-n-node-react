@@ -41,6 +41,19 @@ router.get("/sales", (req, res) => {
     });
 });
 
+//Get category
+router.post("/category", (req, res) => {
+  const category = req.body.category;
+  productSchema
+    .find({ category })
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((error) => {
+      res.status(500).json(["Error in this consult"]);
+    });
+});
+
 //Get one product
 router.get("/product/:id", (req, res) => {
   const { id } = req.params;

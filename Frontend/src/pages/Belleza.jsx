@@ -1,9 +1,9 @@
+import Category from "./Category";
+
 const Belleza = () => {
-  return (
-    <div>
-      <h1 style={{background:"black"}}>Pagina Belleza</h1>
-    </div>
-  );
+  const category = "Belleza";
+  const title = "Nuestros productos de belleza";
+  return <Category category={category} title={title} />;
 };
 
 export default Belleza;
