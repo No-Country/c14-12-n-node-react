@@ -1,6 +1,8 @@
 # c14-12-n-node-react
 # **MARLUI**
-Es una ecommerce B2C enfocada en generar la venta de productos de belleza y cuidado personal.
+<p align="justify"> 
+Es una ecommerce B2C enfocada en generar la venta de productos de belleza y cuidado personal, así como aumentar la visibilidad y reconocimiento en el sector, diferenciarse de la competencia, mejorar la experiencia y satisfacción de sus clientes, generar confianza y credibilidad, y por supuesto, incrementar los ingresos y beneficios. Es un proyecto escalable que busca ofrecer sus productos las 24 horas del día, los 7 días de la semana, sin limitaciones geográficas ni de horario. Además, aprovechar las ventajas del marketing digital, como las redes sociales, el posicionamiento web y las campañas de publicidad online, para promocionar la marca y fidelizar a sus clientes. Permite tener un catálogo actualizado, con fotos y descripciones detalladas de cada producto, así como opciones de personalización, filtros y recomendaciones. También facilita la gestión de los pedidos, el inventario, la facturación y el envío, gracias a las herramientas y plataformas disponibles en el mercado.
+</p>
 
 Link [Marlui](https://c14-12-n-node-react.vercel.app/ "Marlui")
 
@@ -45,15 +47,16 @@ Link [Figma](https://www.figma.com/file/O9BD9C3sB7Oah49wY3BLLS/E-commerce?type=d
 *STYLED COMPONENTS*: Es una biblioteca de Javascript que se utiliza para estilizar documentos.
 
 ### Backend
-<p>
+<p align="center">
     <a href="https://github.com/search?q=user%3ADenverCoder1+is%3Arepo+language%3Ajavascript"><img alt="JavaScript" src="https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?logo=javascript&logoColor=black"></a>
     <a href="https://github.com/search?q=user%3ADenverCoder1+is%3Arepo+language%3Ajavascript"><img alt="NodeJS" src="https://img.shields.io/badge/Node.js%20-%2343853D.svg?logo=node.js&logoColor=white"></a>
 </p>
-
+<p align="center">
 <span>
    <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white">
    <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"> 
 </span>
+</p>
 
 *JAVASCRIPT*
 
@@ -70,13 +73,12 @@ Link [Figma](https://www.figma.com/file/O9BD9C3sB7Oah49wY3BLLS/E-commerce?type=d
 *POSTMAN*: Es una plataforma para realizar pruebas y comprobar el correcto funcionamiento de los proyectos.
 
 ### Testing
-<p>
+<p align="center">
     <a href="https://github.com/Bouaskaoun"><img alt="Postman" src="https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white"></a>
     
 </p>
 *POSTMAN*
 
-*SOAPUI*:  Es una herramienta diseñada para ayudar en la prueba y el desarrollo de aplicaciones.
 
  ###  Software & Tools
  
