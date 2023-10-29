@@ -23,7 +23,6 @@ function NavBar() {
     setHidePlaceholder(inputValue.length > 0);
   };
 
- 
   const out = () => {
     signOut();
   };
@@ -37,11 +36,7 @@ function NavBar() {
         <div className="menu-izq">
           <div>
             <Link to="/">
-              <img
-                src="/src/assets/Logo_Marlui-removebg-preview 1.png"
-                alt="Logo"
-                className="img-logo"
-              />
+              <img src="/Logo_Marlui.png" alt="Logo" className="img-logo" />
             </Link>
           </div>
           <ul>
@@ -63,7 +58,7 @@ function NavBar() {
         <nav className="menu-derecho">
           {!isAuthenticated ? (
             <div className="submenu" onClick={toggleClass}>
-              <img src="./src/img/user-regular-24.png" alt="user" />
+              <img src="/user-regular-24.png" alt="user" />
               <p id="link">Ingresa</p>{" "}
             </div>
           ) : isAdmin ? (
@@ -111,7 +106,7 @@ function NavBar() {
           )}
 
           <div className="submenu">
-            <img src="./src/img/cart-alt-regular-24.png" alt="cart" />
+            <img src="/cart-alt-regular-24.png" alt="cart" />
             <NavLink id="link" to="/login">
               Cart
             </NavLink>

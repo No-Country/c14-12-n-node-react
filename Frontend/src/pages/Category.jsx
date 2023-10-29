@@ -1,16 +1,17 @@
 import { useState, useEffect } from "react";
-import { getSales } from "../Services/productosServices";
 import Product from "../components/Product";
 import Spinner from "react-bootstrap/esm/Spinner";
+import { getByCategory } from "../Services/productosServices";
 
-const Ofertas = () => {
+const Category = (props) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { category, title } = props;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getSales();
+        const data = await getByCategory(category);
         setProducts(data);
         setLoading(false);
       } catch (error) {
@@ -18,7 +19,7 @@ const Ofertas = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [category]);
 
   if (loading) {
     return (
@@ -40,7 +41,7 @@ const Ofertas = () => {
             fontSize: "5.5rem",
           }}
         >
-          Ofertas Especiales
+          {title}
         </h1>
         <div
           className="container"
@@ -63,4 +64,4 @@ const Ofertas = () => {
   }
 };
 
-export default Ofertas;
+export default Category;

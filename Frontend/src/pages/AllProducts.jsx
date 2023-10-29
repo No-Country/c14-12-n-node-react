@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-import { getSales } from "../Services/productosServices";
+import { getAll } from "../Services/productosServices";
 import Product from "../components/Product";
 import Spinner from "react-bootstrap/esm/Spinner";
 
-const Ofertas = () => {
+const AllProducts = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getSales();
+        const data = await getAll();
         setProducts(data);
         setLoading(false);
       } catch (error) {
@@ -40,7 +40,7 @@ const Ofertas = () => {
             fontSize: "5.5rem",
           }}
         >
-          Ofertas Especiales
+          Conoce todos nuestros productos
         </h1>
         <div
           className="container"
@@ -63,4 +63,4 @@ const Ofertas = () => {
   }
 };
 
-export default Ofertas;
+export default AllProducts;

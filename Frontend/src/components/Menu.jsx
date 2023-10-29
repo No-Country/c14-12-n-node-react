@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "../styles/Menu.css";
 
 function Menu() {
@@ -6,10 +6,11 @@ function Menu() {
     <nav>
       <div className="container">
         <div className="menu">
-          <NavLink to="/belleza">Belleza</NavLink>
-          
-          <NavLink to="/link2">Cuidados Personal</NavLink>
-          <NavLink to="/link3">Ofertas</NavLink>
+          <Link to="/all-products">Todos</Link>
+          <Link to="/category/belleza">Belleza</Link>
+          <Link to="/category/Perfumeria">Perfumeria</Link>
+          <Link to="/category/CuidadoPersonal">Cuidados Personal</Link>
+          <Link to="/sales">Ofertas</Link>
         </div>
       </div>
     </nav>
