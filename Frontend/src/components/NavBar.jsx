@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import Login from "./Login";
 import Register from "./Register";
@@ -12,7 +12,7 @@ function NavBar() {
     loginActive,
     register,
     toggleClass,
-    toggleRegister,
+    // toggleRegister,
     name,
     signOut,
   } = useAuth();
@@ -39,21 +39,21 @@ function NavBar() {
               <img src="/Logo_Marlui.png" alt="Logo" className="img-logo" />
             </Link>
           </div>
-          <ul>
-            <div className="buscador-header">
-              <input
-                className="input-buscador"
-                type="search"
-                id="buscador"
-                name="buscador"
-                placeholder={
-                  hidePlaceholder ? "" : "Busca por producto, marca o categoría"
-                }
-                onChange={handleInputChange}
-              />
-              <button type="submit">Buscar</button>
-            </div>
-          </ul>
+          <div className="input-wrapper">
+            <input
+              className="input-buscador"
+              type="search"
+              id="buscador"
+              name="buscador"
+              placeholder={
+                hidePlaceholder ? "" : "Busca por producto, marca o categoría"
+              }
+              onChange={handleInputChange}
+            />
+            <button className="btn_Search" type="submit">
+              Buscar
+            </button>
+          </div>
         </div>
         <nav className="menu-derecho">
           {!isAuthenticated ? (

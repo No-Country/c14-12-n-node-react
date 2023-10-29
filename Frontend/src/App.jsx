@@ -1,15 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import { AuthProvider } from "./context/AuthContext";
 import Header from "./components/Header";
-// import Service from "./pages/Service";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Belleza from "./pages/Belleza";
-
 import ProtectedRoute from "./pages/ProtectedRoute";
-
-import { useState } from "react";
 import Admin from "./pages/Admin";
-import { AuthProvider } from "./context/AuthContext";
 import Profile from "./pages/Profile";
 import ProtectedRouteAdmin from "./pages/ProtectedRouteAdmin";
 import Login from "./pages/LoginPage";
@@ -23,7 +20,7 @@ import OnlyOneProduct from "./pages/OnlyOneProduct";
 function App() {
   const [auth, setAuth] = useState(true);
 
-  // const verify = (state) => {
+  //  const verify = (state) => {
   //    setAuth(prop.auth);
   //  };
   return (

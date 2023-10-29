@@ -14,10 +14,10 @@
   text-align: center;
   width: calc(
     60% - 132px
-  ); /* Ajusta el ancho para dejar espacio para el botón */
+  ); 
   height: 93.5px;
-  gap: 116px; /* Cambiado para ajustar el espacio entre el logo y el input */
-  margin-left: 116px; /* Ajusta el margen izquierdo para centrar */
+  gap: 116px; 
+  margin-left: 116px;
 }
 
 .img-logo {
@@ -34,9 +34,9 @@
 .input-buscador {
   background-color: white;
   width: 508px;
-  height: 56px;
+  height: 56px; 
   border-radius: 20px;
-  padding: 0px 20px 0px 25px;
+  padding: 0px 0px 0px 25px; 
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -45,6 +45,7 @@
   text-align: left;
   background-color: white;
   border-radius: 20px;
+  gap: 10px;
 }
 
 .btn_Search {
@@ -59,12 +60,6 @@
   position: absolute;
   right: 0;
   top: 0;
-  &:hover {
-    background-color: #e65d0e;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
-  }
 }
 
 .menu-derecho {

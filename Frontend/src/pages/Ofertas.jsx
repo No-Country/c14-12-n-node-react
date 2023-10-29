@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getSales } from "../Services/productosServices";
 import Product from "../components/Product";
-import Spinner from "react-bootstrap/esm/Spinner";
+import Spinner from "react-bootstrap/Spinner";
 
 const Ofertas = () => {
   const [products, setProducts] = useState([]);
@@ -14,7 +14,7 @@ const Ofertas = () => {
         setProducts(data);
         setLoading(false);
       } catch (error) {
-        console.log("Error fetching products", error);
+        console.log("Error GET products", error);
       }
     };
     fetchData();
