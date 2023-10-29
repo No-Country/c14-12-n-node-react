@@ -9,7 +9,7 @@ function Menu() {
           <NavLink to="/belleza">Belleza</NavLink>
           
           <NavLink to="/link2">Cuidados Personal</NavLink>
-          <NavLink to="/link3">Ofertas</NavLink>
+          <NavLink to="/sales">Ofertas</NavLink>
         </div>
       </div>
     </nav>

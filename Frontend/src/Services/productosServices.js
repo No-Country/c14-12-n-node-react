@@ -1,14 +1,9 @@
-
 const URL = "http://localhost:4000/api";
 
-
 export async function getAll() {
-    //GET por productos
-   return await fetch(`${URL}/product`).then((res)=>
-   
-       res.json()
-    );
-  }
+  //GET por productos
+  return await fetch(`${URL}/product`).then((res) => res.json());
+}
 
 export async function getSales() {
   //GET por ofertas
