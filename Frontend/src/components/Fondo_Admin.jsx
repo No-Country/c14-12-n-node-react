@@ -1,10 +1,16 @@
+import styled from "styled-components";
 
+const StyledFondo = styled.div`
+    background-color: gray;
+`;
 
 const FondoAdmin = () => {
     return (
-        <div>
-            
-        </div>
+        
+        <StyledFondo>
+
+        </StyledFondo>
+        
     );
 }
 

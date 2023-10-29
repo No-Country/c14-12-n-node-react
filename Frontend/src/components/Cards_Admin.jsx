@@ -1,25 +1,37 @@
 import styled from 'styled-components';
 
-
-const StyledCard = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width: 200px;
-height: 150px;
-border: 1px solid #eda415;
-border-radius: 15px;
-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.45);
+const StyledContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 `;
 
-const CardWithIcon = () => {
-return (
-    <StyledCard>
 
-    </StyledCard>
+const StyledCard = styled.div`
+    background-color: #ffffff;
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+        transform: translateY(-5px);
+        transition: all .2s ease-in-out;
+    }
+`;
+
+
+
+const CardsAdmin = () => {
+    return (
+        <StyledContainer>
+            <StyledCard/>
+        </StyledContainer>
         
-);
-};
+    );
+}
 
-export default CardWithIcon;
+export default CardsAdmin;

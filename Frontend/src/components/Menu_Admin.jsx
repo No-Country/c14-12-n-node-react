@@ -1,97 +1,67 @@
+import styled from 'styled-components';
 
-import styled from "styled-components";
-import { useState } from "react";
-import { FaBars, FaHome, FaDollarSign, FaBoxOpen, FaUserFriends,FaCog  } from 'react-icons/fa';
+const StyledMenu = styled.nav`
+  position: absolute;
+  width: 240px;
+  height: 88%;
+  margin-left: -195px;
+  margin-top:10px;
+  margin-bottom: 160px;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  left: 10px;
+  &:hover {
+  transform:translateX(200px);
+  transition: transform 0.3s ease-in-out;
+  } 
+`;
 
+const StyledUpMenu = styled.h3`
+color: #633974;
+margin-left: 189px;
+margin-top: 0;
+margin-bottom: 0;
+`;
 
-const StyledNavbar = styled.div`
+const StyledList = styled.ul`
   display: flex;
   flex-direction: column;
-  text-aling: left;
-  align-items: center;
+  list-style: none;
+  margin-top: 50px;
+  padding: 0;
 `;
 
-const StyledBoton = styled.button`
-  margin-left: 50px;
-  top: 80px;
-  padding: 30px;
-  background-color: transparent;
-  border: none;
+const StyledItem = styled.li`
+  color: rgba (230, 230, 230, .9);
+  padding: 20px 0;
+  border-bottom: 1px solid rgba (100, 100, 100, .3);
+  text-align: center;
   cursor: pointer;
-  color: #fff; 
-`;
 
-
-
-const StyledUl = styled.ul`
-position: relative;
-top: 30rem;
-left: 10px;
-bottom: 0;
-background-color: #ede9; 
-width:300px;
-heigth: calc(100% - 40px);
-display: flex;
-flex-direction: column;
-text-align: left;
-`;
-
-const StyledLi = styled.li`
-display: flex;
-flex-direction: row;
-text-aling: center;
-aling-itens: center;
-margin-top: 40px;
-width:100%;
-cursor: pointer;
-&:hover {
-    background-color: #905994;    
-} 
-`;
-
-const StyledSpan = styled.span`
-margin-left: 30px;
-`;
-
-const StyledH3 = styled.h3`
-margin-left: 30px;
-padding-top: 2rem;
-color: black;
-`;
-
-const StyledIcon = styled.i`
-margin-left: 50px;
-padding-top: 2rem;
-`;
-
-
-
-const NavbarAdministrando = () => { 
-
-  const [open, setOpen] = useState(false);
-
-  const handleClick = () => {
-    setOpen(!open);
+  &:hover {
+    color: #ffffff;
+    background:#633974;;
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
   }
+`;
+
+function MenuAdmin() {
   return (
-  <StyledNavbar>
-    <StyledBoton onClick={handleClick}>
-      <FaBars />
-    </StyledBoton>    
-      {open && (
-        <StyledUl>
-          <StyledLi><StyledIcon><FaHome/></StyledIcon><StyledSpan/><StyledH3>Inicio</StyledH3></StyledLi>         
-          <StyledLi><StyledIcon><FaDollarSign/></StyledIcon><StyledSpan/><StyledH3>Ventas</StyledH3></StyledLi>          
-          <StyledLi><StyledIcon><FaBoxOpen/></StyledIcon><StyledSpan/><StyledH3>Productos</StyledH3></StyledLi>
-          <StyledLi><StyledIcon><FaUserFriends/></StyledIcon><StyledSpan/><StyledH3>Clientes</StyledH3></StyledLi>
-          <StyledLi><StyledIcon><FaCog/></StyledIcon><StyledSpan/><StyledH3>Configuración</StyledH3></StyledLi>
-        </StyledUl>
-      )};
-  </StyledNavbar>
-    
+    <StyledMenu>
+      <StyledUpMenu>M</StyledUpMenu>
+      <StyledUpMenu>e</StyledUpMenu>
+      <StyledUpMenu>n</StyledUpMenu>
+      <StyledUpMenu>ú</StyledUpMenu>
+      <StyledList>
+        <StyledItem>Inicio</StyledItem>
+        <StyledItem>Perfil</StyledItem>
+        <StyledItem>Pedidos</StyledItem>
+        <StyledItem>Ayuda</StyledItem>
+        <StyledItem>Salir</StyledItem>
+      </StyledList>
+    </StyledMenu>   
   );
-};
+}
 
-
-export default NavbarAdministrando;
-
+export default MenuAdmin; 
