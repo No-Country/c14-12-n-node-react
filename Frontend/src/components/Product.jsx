@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 import CardBody from "reactstrap/lib/CardBody";
 import Card from "reactstrap/lib/Card";
 import CardTitle from "reactstrap/lib/CardTitle";
@@ -8,30 +9,31 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function Product({ name, price, quantity, image }) {
+function Product({ _id, name, price, quantity, image }) {
   return (
-    <Col
-      sm="2"
-      
-    >
-      <Row style={{
-           width: "291px",
-           height: "511px",
-           padding: "0px, 0px, 16px, 0px",
-           radius: "8px",
-           gap: "20px",
-         }}
-         
+    <Col sm="2">
+      <Row
+        style={{
+          width: "291px",
+          height: "511px",
+          padding: "0px, 0px, 16px, 0px",
+          radius: "8px",
+          gap: "20px",
+        }}
       >
         <Card color="light">
-          <img
-            alt={name}
-            src={image}
-            style={{ width: "100%", height: "100%" }}
-          />
+          <Link to={`/product/${_id}`}>
+            <img
+              alt={name}
+              src={image}
+              style={{ width: "100%", height: "100%" }}
+            />
+          </Link>
           <CardBody>
             <CardTitle tag="h3">{name}</CardTitle>
-            <CardText className="mb-2 text-muted fs-5">Quedan {quantity}</CardText>
+            <CardText className="mb-2 text-muted fs-5">
+              Quedan {quantity}
+            </CardText>
             <CardTitle className="mb-2 text-muted fw-bold fs-1">
               ${price}
             </CardTitle>

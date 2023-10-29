@@ -18,6 +18,7 @@ import Ofertas from "./pages/Ofertas";
 import CuidadoPersonal from "./pages/CuidadoPersonal";
 import Perfumeria from "./pages/Perfumeria";
 import AllProducts from "./pages/AllProducts";
+import OnlyOneProduct from "./pages/OnlyOneProduct";
 
 function App() {
   const [auth, setAuth] = useState(true);
@@ -36,6 +37,7 @@ function App() {
             <Route path="/error" exact element={<ErrorPage />} />
             {/* <Route path="/service" exact element={<Service />} /> */}
             <Route path="/all-products" exact element={<AllProducts />} />
+            <Route path="/product/:id" exact element={<OnlyOneProduct />} />
             <Route path="/sales" exact element={<Ofertas />} />
             <Route
               path="/category/CuidadoPersonal"

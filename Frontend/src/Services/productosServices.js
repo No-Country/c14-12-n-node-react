@@ -10,13 +10,6 @@ export async function getSales() {
   return await fetch(`${URL}/sales`).then((res) => res.json());
 }
 
-/*
-export async function getByCategory(category) {
-  //Get por Categoria
-  return await fetch(`${URL}/category/:category`).then((res) => res.json());
-}
-*/
-
 export async function getByCategory(category) {
   //Get por Categoria
   const requestBody = { category: category };
@@ -31,5 +24,5 @@ export async function getByCategory(category) {
 
 export async function getElementById(id) {
   //GET por ID
-  return await fetch(`${URL}/:${id}`).then((res) => res.json());
+  return await fetch(`${URL}/product/${id}`).then((res) => res.json());
 }
