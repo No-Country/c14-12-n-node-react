@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import Product from "../components/Product";
 import Spinner from "react-bootstrap/esm/Spinner";

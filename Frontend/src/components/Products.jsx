@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getAll } from "../Services/productosServices";
 import Product from "../components/Product";
 import Spinner from "react-bootstrap/Spinner";
-import "../styles/MostrarTodoMenu.css";
+
 
 function Products() {
   const [products, setProducts] = useState([]);

@@ -10,14 +10,15 @@ import Button from "reactstrap/lib/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/cardStyle.css";
 
 function Product({ _id, name, price, quantity, image }) {
   const context = useContext(ShoppingCartContext);
 
   return (
-    <Col>
-      <Row className="cardStyle">
-        <Card color="light">
+    <Col style={{margin:"0 -6rem 0 -1rem", display:"flex",justifyContent:"space-evenly"}}>
+      <Row >
+        <Card color="light" className="cardStyle">
           <Link to={`/product/${_id}`}>
             <img
               alt={name}
@@ -26,7 +27,7 @@ function Product({ _id, name, price, quantity, image }) {
             />
           </Link>
           <CardBody>
-            <CardTitle className="fs-5">{name}</CardTitle>
+            <CardTitle className="tituloCard">{name}</CardTitle>
             <CardText className="mb-2 text-muted">Quedan {quantity}</CardText>
             <CardTitle className="mb-2 text-muted fw-bold fs-3">
               ${price}
