@@ -20,7 +20,7 @@ app.use(
   // allowCors
   cors({
     //origin: "http://localhost:5173",
-    origin:"https://c14-12-n-node-react.vercel.app"
+    origin:"c14-12-n-node-react-lgdsegb81-marlui.vercel.app"
     credentials: true,
   })
 );
