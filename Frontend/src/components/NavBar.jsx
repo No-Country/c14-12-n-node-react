@@ -15,6 +15,7 @@ function NavBar() {
     count,
     name,
     signOut,
+    refuse,
   } = useAuth();
 
   const [hidePlaceholder, setHidePlaceholder] = useState(false);
@@ -25,6 +26,7 @@ function NavBar() {
 
   const out = () => {
     signOut();
+    refuse();
   };
 
   return (
