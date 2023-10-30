@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FaBars } from 'react-icons/fa';
 
 const StyledMenu = styled.nav`
   position: absolute;
@@ -18,8 +19,8 @@ const StyledMenu = styled.nav`
 
 const StyledUpMenu = styled.h3`
 color: #633974;
-margin-left: 189px;
-margin-top: 0;
+margin-left: 198px;
+margin-top: 5px;
 margin-bottom: 0;
 `;
 
@@ -27,32 +28,30 @@ const StyledList = styled.ul`
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin-top: 50px;
+  margin-top: 60px;
   padding: 0;
 `;
 
 const StyledItem = styled.li`
   color: rgba (230, 230, 230, .9);
-  padding: 20px 0;
+  padding: 25px 0;
   border-bottom: 1px solid rgba (100, 100, 100, .3);
   text-align: center;
   cursor: pointer;
+  font-size: 16px;
 
   &:hover {
     color: #ffffff;
     background:#633974;;
-    transform: scale(1.1);
-    transition: all .2s ease-in-out;
+    transform: scale(1);
+    transition: all .3s ease-in-out;
   }
 `;
 
 function MenuAdmin() {
   return (
     <StyledMenu>
-      <StyledUpMenu>M</StyledUpMenu>
-      <StyledUpMenu>e</StyledUpMenu>
-      <StyledUpMenu>n</StyledUpMenu>
-      <StyledUpMenu>ú</StyledUpMenu>
+      <StyledUpMenu><FaBars/></StyledUpMenu>      
       <StyledList>
         <StyledItem>Inicio</StyledItem>
         <StyledItem>Perfil</StyledItem>
