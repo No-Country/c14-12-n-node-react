@@ -15,7 +15,6 @@ import Ofertas from "./pages/Ofertas";
 import CuidadoPersonal from "./pages/CuidadoPersonal";
 import Perfumeria from "./pages/Perfumeria";
 import AllProducts from "./pages/AllProducts";
-import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 import OnlyOneProduct from "./pages/OnlyOneProduct";
 
 function App() {
