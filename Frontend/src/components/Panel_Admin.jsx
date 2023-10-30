@@ -7,7 +7,7 @@ const Panel = styled.section`
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 grid-template-rows: repeat(2, 1fr);
-gap: 2px;
+gap: 20px;
 margin-left: 320px;
 padding-bottom: 60px;
 width: 65rem;
