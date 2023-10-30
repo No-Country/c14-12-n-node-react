@@ -7,12 +7,9 @@
   align-items: center;
 }
 
-
-
 .tituloCard {
   font-size: 1.2rem;
   font-weight: 700;
   min-height: 7rem;
   flex-wrap: hidden;
 }
-
