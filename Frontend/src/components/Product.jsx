@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react";
-import { ShoppingCartContext } from "../context/ShoppingCartContext";
+import { useAuth } from "../context/AuthContext";
 import { Link } from "react-router-dom";
 import CardBody from "reactstrap/lib/CardBody";
 import Card from "reactstrap/lib/Card";
@@ -13,11 +13,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/cardStyle.css";
 
 function Product({ _id, name, price, quantity, image }) {
-  const context = useContext(ShoppingCartContext);
+  const { ShoppingCartContext } = useAuth();
 
   return (
-    <Col style={{margin:"0 -6rem 0 -1rem", display:"flex",justifyContent:"space-evenly"}}>
-      <Row >
+    <Col
+      style={{
+        margin: "0 -6rem 0 -1rem",
+        display: "flex",
+        justifyContent: "space-evenly",
+      }}
+    >
+      <Row>
         <Card color="light" className="cardStyle">
           <Link to={`/product/${_id}`}>
             <img
@@ -35,7 +41,7 @@ function Product({ _id, name, price, quantity, image }) {
 
             <Button
               className={"btn btn-success btn-lg text-body-light fs-5 fw-bold"}
-              onClick={() => context.setCount(context.count + 1)}
+              onClick={ShoppingCartContext}
               type="button"
               style={{
                 width: "244px",

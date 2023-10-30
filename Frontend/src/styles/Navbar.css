@@ -12,11 +12,9 @@
   display: flex;
   align-items: center;
   text-align: center;
-  width: calc(
-    60% - 132px
-  ); 
+  width: calc(60% - 132px);
   height: 93.5px;
-  gap: 116px; 
+  gap: 116px;
   margin-left: 116px;
 }
 
@@ -34,9 +32,9 @@
 .input-buscador {
   background-color: white;
   width: 508px;
-  height: 56px; 
+  height: 56px;
   border-radius: 20px;
-  padding: 0px 0px 0px 25px; 
+  padding: 0px 0px 0px 25px;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -88,10 +86,19 @@
 
 .logout-button {
   color: white;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   margin-left: 5rem;
   cursor: pointer;
   &:hover {
     color: orange;
   }
+}
+
+.admin-button {
+  background: #eda415;
+  color: white;
+  font-size: 1.4rem;
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 2rem;
 }

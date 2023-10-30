@@ -26,41 +26,35 @@ function App() {
   //  };
   return (
     <>
-      <ShoppingCartProvider>
-        <AuthProvider>
-          <Router>
-            <Header />
-            <Routes>
-              <Route path="/" exact element={<Home />} />
-              <Route path="/login" exact element={<Login />} />
-              <Route path="/error" exact element={<ErrorPage />} />
-              {/* <Route path="/service" exact element={<Service />} /> */}
-              <Route path="/all-products" exact element={<AllProducts />} />
-              <Route path="/product/:id" exact element={<OnlyOneProduct />} />
-              <Route path="/sales" exact element={<Ofertas />} />
-              <Route
-                path="/category/CuidadoPersonal"
-                exact
-                element={<CuidadoPersonal />}
-              />
-              <Route path="/category/Belleza" exact element={<Belleza />} />
-              <Route
-                path="/category/Perfumeria"
-                exact
-                element={<Perfumeria />}
-              />
+      <AuthProvider>
+        <Router>
+          <Header />
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/login" exact element={<Login />} />
+            <Route path="/error" exact element={<ErrorPage />} />
+            {/* <Route path="/service" exact element={<Service />} /> */}
+            <Route path="/all-products" exact element={<AllProducts />} />
+            <Route path="/product/:id" exact element={<OnlyOneProduct />} />
+            <Route path="/sales" exact element={<Ofertas />} />
+            <Route
+              path="/category/CuidadoPersonal"
+              exact
+              element={<CuidadoPersonal />}
+            />
+            <Route path="/category/Belleza" exact element={<Belleza />} />
+            <Route path="/category/Perfumeria" exact element={<Perfumeria />} />
 
-              <Route element={<ProtectedRoute />}>
-                <Route path="/profile" exact element={<Profile />} />
-                <Route element={<ProtectedRouteAdmin />}>
-                  <Route path="/admin" exact element={<Admin />} />
-                </Route>
+            <Route element={<ProtectedRoute />}>
+              <Route path="/profile" exact element={<Profile />} />
+              <Route element={<ProtectedRouteAdmin />}>
+                <Route path="/admin" exact element={<Admin />} />
               </Route>
-            </Routes>
-            <Footer />
-          </Router>
-        </AuthProvider>
-      </ShoppingCartProvider>
+            </Route>
+          </Routes>
+          <Footer />
+        </Router>
+      </AuthProvider>
     </>
   );
 }
