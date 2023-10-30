@@ -1,32 +1,30 @@
 .contenido-topbar {
   display: flex;
-  text-align: center;
+  font-size: 20px;
+  justify-content: space-around;
+  padding: 3rem;
   align-items: center;
-  justify-content: space-evenly;
-
-  width: Fixed (1, 728px);
-  height: Fixed (74px);
-  padding: 9px, 201px, 9px, 201px;
-  gap: 278px;
+  height: 4rem;
 }
 
-h2 {
+.contenido-topbar h2 {
   font-size: 16px;
-  line-height: 24px;
 }
 
-.contenido-envios {
+.envios__imgYstrong {
   display: flex;
-  text-align: center;
   align-items: center;
-  justify-content: space-between;
+}
+
+.envios__imgYstrong h2 {
+  margin-right: 1rem;
 }
 
 .icon-topbar {
-  margin: 1rem;
+  margin-top: -1.2rem;
 }
 
-strong {
-  font-size: 20px;
-  line-height: 30px;
+.envios__imgYstrong p {
+  font-weight: 700;
+  margin-top: 0.2rem;
 }
