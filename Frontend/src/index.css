@@ -8,6 +8,16 @@
   font-family: poppins, sans-serif;
 }
 
+.fixed-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
 html {
   font-size: 62.5%;
 }

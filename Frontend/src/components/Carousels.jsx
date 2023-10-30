@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Spinner from "react-bootstrap/esm/Spinner";
 import {
   Carousel,
   CarouselItem,
@@ -7,31 +8,28 @@ import {
   CarouselCaption,
 } from "reactstrap";
 import "../styles/Carousel.css";
-
-const items = [
-  {
-    src: "https://picsum.photos/id/123/1200/400",
-    altText: "Slide 1",
-    caption: "Slide 1",
-    key: 1,
-  },
-  {
-    src: "https://picsum.photos/id/456/1200/400",
-    altText: "Slide 2",
-    caption: "Slide 2",
-    key: 2,
-  },
-  {
-    src: "https://picsum.photos/id/678/1200/400",
-    altText: "Slide 3",
-    caption: "Slide 3",
-    key: 3,
-  },
-];
+import { getBanner } from "../Services/bannerServices";
 
 function Carousels(args) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
+  const [banner, setBanner] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getBanner();
+        setBanner(data);
+        setLoading(false);
+      } catch (error) {
+        console.log("Error fetching products", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  const items = banner;
 
   const next = () => {
     if (animating) return;
@@ -55,16 +53,24 @@ function Carousels(args) {
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
-        key={item.src}
+        key={item._id}
       >
-        <img className="carousel-image" src={item.src} alt={item.altText} />
+        <img className="carousel-image" src={item.image} alt={item.altText} />
         <CarouselCaption
-          captionText={item.caption}
-          captionHeader={item.caption}
+          captionText={item.description}
+          captionHeader={item.title}
         />
       </CarouselItem>
     );
   });
+
+  if (loading) {
+    return (
+      <div className="d-flex align-items-center">
+        <Spinner animation="grow" />
+      </div>
+    );
+  }
 
   return (
     <Carousel

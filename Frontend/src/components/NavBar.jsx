@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { NavLink, Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import Login from "./Login";
 import Register from "./Register";
 import "../styles/Navbar.css";
-import { useAuth } from "../context/AuthContext";
 
 function NavBar() {
   const {
@@ -12,7 +12,7 @@ function NavBar() {
     loginActive,
     register,
     toggleClass,
-    // toggleRegister,
+    count,
     name,
     signOut,
   } = useAuth();
@@ -63,14 +63,7 @@ function NavBar() {
             </div>
           ) : isAdmin ? (
             <>
-              <Link
-                to="/admin"
-                style={{
-                  color: "#15b1c5",
-                  fontSize: "2.4rem",
-                  textDecoration: "none",
-                }}
-              >
+              <Link className="admin-button" to="/admin">
                 Administrar
               </Link>
               <div
@@ -81,7 +74,7 @@ function NavBar() {
                   margin: "1rem 5rem 0 ",
                 }}
               >
-                <p style={{ color: "white", fontSize: "1.8rem" }}>
+                <p style={{ color: "white", fontSize: "1.2rem" }}>
                   Hola {name}
                 </p>
                 <p className="logout-button" onClick={out}>
@@ -98,7 +91,7 @@ function NavBar() {
                 margin: "1rem 5rem 0 ",
               }}
             >
-              <p style={{ color: "white", fontSize: "1.8rem" }}>Hola {name}</p>
+              <p style={{ color: "white", fontSize: "1.2rem" }}>Hola {name}</p>
               <p className="logout-button" onClick={out}>
                 Sign Out
               </p>
@@ -108,7 +101,7 @@ function NavBar() {
           <div className="submenu">
             <img src="/cart-alt-regular-24.png" alt="cart" />
             <NavLink id="link" to="/login">
-              Cart
+              {count}
             </NavLink>
           </div>
         </nav>

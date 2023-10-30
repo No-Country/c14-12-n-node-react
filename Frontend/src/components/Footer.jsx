@@ -8,8 +8,11 @@ import {
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../styles/Footer.css";
+import { useAuth } from "../context/AuthContext";
 
 function Footer() {
+  const { refuse } = useAuth();
+
   return (
     <Container fluid className="contenedor-footer">
       <Row>
@@ -41,7 +44,11 @@ function Footer() {
               <FaEnvelope />
             </a>
           </div>
-          <Button className="arrepentimiento-footer" variant="warning">
+          <Button
+            className="arrepentimiento-footer"
+            variant="warning"
+            onClick={refuse}
+          >
             Botón de Arrepentimiento
           </Button>
         </Col>

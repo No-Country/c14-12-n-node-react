@@ -1,4 +1,7 @@
 /* eslint-disable react/prop-types */
+import { useContext } from "react";
+import { useAuth } from "../context/AuthContext";
+import { Link } from "react-router-dom";
 import CardBody from "reactstrap/lib/CardBody";
 import Card from "reactstrap/lib/Card";
 import CardTitle from "reactstrap/lib/CardTitle";
@@ -7,37 +10,38 @@ import Button from "reactstrap/lib/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/cardStyle.css";
 
-function Product({ name, price, quantity, image }) {
+function Product({ _id, name, price, quantity, image }) {
+  const { ShoppingCartContext } = useAuth();
+
   return (
     <Col
-      sm="2"
-      
+      style={{
+        margin: "0 -6rem 0 -1rem",
+        display: "flex",
+        justifyContent: "space-evenly",
+      }}
     >
-      <Row style={{
-           width: "291px",
-           height: "511px",
-           padding: "0px, 0px, 16px, 0px",
-           radius: "8px",
-           gap: "20px",
-         }}
-         
-      >
-        <Card color="light">
-          <img
-            alt={name}
-            src={image}
-            style={{ width: "100%", height: "100%" }}
-          />
+      <Row>
+        <Card color="light" className="cardStyle">
+          <Link to={`/product/${_id}`}>
+            <img
+              alt={name}
+              src={image}
+              style={{ width: "100%", height: "100%" }}
+            />
+          </Link>
           <CardBody>
-            <CardTitle tag="h3">{name}</CardTitle>
-            <CardText className="mb-2 text-muted fs-5">Quedan {quantity}</CardText>
-            <CardTitle className="mb-2 text-muted fw-bold fs-1">
+            <CardTitle className="tituloCard">{name}</CardTitle>
+            <CardText className="mb-2 text-muted">Quedan {quantity}</CardText>
+            <CardTitle className="mb-2 text-muted fw-bold fs-3">
               ${price}
             </CardTitle>
 
             <Button
-              className={"btn btn-success btn-lg text-body-light fs-3 fw-bold"}
+              className={"btn btn-success btn-lg text-body-light fs-5 fw-bold"}
+              onClick={ShoppingCartContext}
               type="button"
               style={{
                 width: "244px",
@@ -47,6 +51,7 @@ function Product({ name, price, quantity, image }) {
                 gap: "10px",
               }}
             >
+              {" "}
               Agregar al Carrito
             </Button>
           </CardBody>

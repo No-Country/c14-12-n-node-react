@@ -6,6 +6,7 @@ const userRoutes = require("./routes/user");
 const productRoutes = require("./routes/product");
 const categoryRoutes = require("./routes/category");
 const orderRoutes = require("./routes/order");
+const bannerRoutes = require("./routes/banner");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 // const allowCors = require("./middlewares/allowCors");
@@ -29,6 +30,7 @@ app.use("/api", userRoutes);
 app.use("/api", productRoutes);
 app.use("/api", categoryRoutes);
 app.use("/api", orderRoutes);
+app.use("/api", bannerRoutes);
 
 //routes
 app.get("/", (req, res) => {

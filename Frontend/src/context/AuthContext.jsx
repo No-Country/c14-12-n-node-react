@@ -28,6 +28,8 @@ export const AuthProvider = ({ children }) => {
   const [register, setRegister] = useState(false);
   const [name, setName] = useState("");
 
+  const [count, setCount] = useState(0);
+
   const toggleClass = () => {
     setLoginActive(!loginActive);
   };
@@ -127,8 +129,25 @@ export const AuthProvider = ({ children }) => {
       }
     }
     checkLogin();
-    console.log(isAdmin, name);
   }, []);
+
+  const ShoppingCartContext = () => {
+    if (isAuthenticated) {
+      setCount(count + 1);
+      console.log(count);
+    } else {
+      toggleClass();
+    }
+  };
+
+  const refuse = () => {
+    if (isAuthenticated) {
+      setCount(0);
+      console.log(count);
+    } else {
+      toggleClass();
+    }
+  };
 
   return (
     <AuthContext.Provider
@@ -146,6 +165,9 @@ export const AuthProvider = ({ children }) => {
         name,
         loading,
         signOut,
+        ShoppingCartContext,
+        count,
+        refuse,
       }}
     >
       {children}
