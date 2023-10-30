@@ -17,6 +17,11 @@ const port = process.env.PORT || 4000;
 //middleware
 app.use(express.json({ extended: true }));
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://c14-12-n-node-react.vercel.app",
+];
+
 const corsOptions = {
   origin: function (origin, callback) {
     if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
