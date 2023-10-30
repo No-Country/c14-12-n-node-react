@@ -127,7 +127,6 @@ export const AuthProvider = ({ children }) => {
       }
     }
     checkLogin();
-    console.log(isAdmin, name);
   }, []);
 
   return (

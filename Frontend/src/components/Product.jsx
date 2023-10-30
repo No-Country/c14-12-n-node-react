@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react";
 import { ShoppingCartContext } from "../context/ShoppingCartContext";
+import { Link } from "react-router-dom";
 import CardBody from "reactstrap/lib/CardBody";
 import Card from "reactstrap/lib/Card";
 import CardTitle from "reactstrap/lib/CardTitle";
@@ -10,28 +11,23 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function Product({ name, price, quantity, image }) {
-
-const context = useContext(ShoppingCartContext);
-
-
+function Product({ _id, name, price, quantity, image }) {
+  const context = useContext(ShoppingCartContext);
 
   return (
     <Col>
-      <Row
-       className="cardStyle"
-      >
+      <Row className="cardStyle">
         <Card color="light">
-          <img
-            alt={name}
-            src={image}
-            style={{ width: "100%", height: "100%" }}
-          />
+          <Link to={`/product/${_id}`}>
+            <img
+              alt={name}
+              src={image}
+              style={{ width: "100%", height: "100%" }}
+            />
+          </Link>
           <CardBody>
             <CardTitle className="fs-5">{name}</CardTitle>
-            <CardText className="mb-2 text-muted">
-              Quedan {quantity}
-            </CardText>
+            <CardText className="mb-2 text-muted">Quedan {quantity}</CardText>
             <CardTitle className="mb-2 text-muted fw-bold fs-3">
               ${price}
             </CardTitle>
@@ -39,15 +35,17 @@ const context = useContext(ShoppingCartContext);
             <Button
               className={"btn btn-success btn-lg text-body-light fs-5 fw-bold"}
               onClick={() => context.setCount(context.count + 1)}
-              type="button" style=
-              {{
+              type="button"
+              style={{
                 width: "244px",
                 height: "48px",
                 padding: "12px, 50px, 12px, 50px",
                 radius: "8px",
                 gap: "10px",
               }}
-              > Agregar al Carrito
+            >
+              {" "}
+              Agregar al Carrito
             </Button>
           </CardBody>
         </Card>
