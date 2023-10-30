@@ -6,27 +6,27 @@ import NavBar from "./NavBar";
 import Menu from "./Menu";
 
 const Header = () => {
-  
   return (
-    <Container fluid>
-      <Row>
-        <Col>
-          <TopBar />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <NavBar />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <Menu />
-        </Col>
-      </Row>
-    </Container>
+    <div className="fixed-header">
+      <Container fluid>
+        <Row>
+          <Col>
+            <TopBar />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <NavBar />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Menu />
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 
 export default Header;
-

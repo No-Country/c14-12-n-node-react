@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useState, useContext} from "react";
 import { NavLink, Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+import { ShoppingCartContext } from "../context/ShoppingCartContext";
 import Login from "./Login";
 import Register from "./Register";
 import "../styles/Navbar.css";
-import { useAuth } from "../context/AuthContext";
 
 function NavBar() {
+
+const context = useContext(ShoppingCartContext);
+
+
   const {
     isAdmin,
     isAuthenticated,
@@ -108,7 +113,7 @@ function NavBar() {
           <div className="submenu">
             <img src="/cart-alt-regular-24.png" alt="cart" />
             <NavLink id="link" to="/login">
-              Cart
+              {context?.count}
             </NavLink>
           </div>
         </nav>

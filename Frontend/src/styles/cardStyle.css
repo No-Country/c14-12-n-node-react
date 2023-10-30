@@ -1,3 +1,9 @@
+.cardStyle {
+  width: 300px;
+  height: 550px;
+  
+}
+
 .Cards {
   display: "flex";
   align-items: center;
@@ -7,3 +13,4 @@
   left: 197px;
   gap: 80px;
 }
+
