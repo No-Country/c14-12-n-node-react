@@ -1,10 +1,10 @@
-// import FondoAdmin from "../components/Fondo_Admin";
 import MenuAdmin from "../components/Menu_Admin";
 import MyPanel from "../components/Panel_Admin";
 import styled from "styled-components"
 
 const StyledFondo = styled.div`
 background-color: #e7e7e7;
+margin: 0;
 `;
 
 const StyledContainerTitle = styled.div`
@@ -12,9 +12,9 @@ display: flex;
 flex-direction: column;
 text-aling: center;
 aling-itens: center;
-padding: 3rem;
+padding: 2rem;
 margin-top: 3rem;
-margin-left: 30rem;
+margin-left: 31rem;
 width:100rem;
 `;
 
@@ -40,7 +40,7 @@ const Admin = () => {
     <StyledTitle>Hola Marlui !!</StyledTitle>
     <StyledSubTitle>Todas las tareas que necesitas realizar, están acá:</StyledSubTitle>
     </StyledContainerTitle>
-    <MyPanel/>      
+    <MyPanel/>
   </StyledFondo> 
   );
 }

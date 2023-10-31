@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 import { FaThList, FaMoneyBillAlt, FaUserFriends, FaTruck, FaBoxOpen, FaTags } from 'react-icons/fa';
-
+import CrearCategoria from './Regist_Categoria';
+import CrearMediosDeEnvio from './Regist_Envios';
+import CrearOferta from './Regist_Ofertas';
+import CrearCliente from './Regist_Clientes';
+import CrearMediosDePagos from './Regist_Pagos';
+import CrearProducto from './Regist_Producto';
+import { useNavigate } from 'react-router-dom';
 
 const StyledCard = styled.div`
     background-color: #ffffff;
@@ -41,14 +47,37 @@ font-size: 16px
 
 
 const CardsAdmin = () => {
+    const navigate = useNavigate(); 
+
+    const goCrearCategoria = ( ) => {
+        navigate('/admin/crearCategoria')
+    }
     return (
         <>
-            <StyledCard><StyledIcons><FaThList/></StyledIcons><StyledTask>Crear una Categoría</StyledTask></StyledCard>
-            <StyledCard><StyledIcons><FaTruck/></StyledIcons><StyledTask>Medios de Envío</StyledTask></StyledCard>
-            <StyledCard><StyledIcons><FaBoxOpen/></StyledIcons><StyledTask>Crear Ofertas</StyledTask></StyledCard>
-            <StyledCard><StyledIcons><FaUserFriends/></StyledIcons><StyledTask>Crear Clientes</StyledTask></StyledCard>
-            <StyledCard><StyledIcons><FaMoneyBillAlt/></StyledIcons><StyledTask>Medios de Pago</StyledTask></StyledCard>
-            <StyledCard><StyledIcons><FaTags/></StyledIcons><StyledTask>Crear Productos</StyledTask></StyledCard>        
+            <StyledCard onClick={ goCrearCategoria }>
+                <StyledIcons><FaThList/></StyledIcons>
+                <StyledTask>Crear una Categoría</StyledTask>
+            </StyledCard>
+            <StyledCard onClick={() => { <CrearMediosDeEnvio/> }} >
+                <StyledIcons><FaTruck/></StyledIcons>
+                <StyledTask>Medios de Envío</StyledTask>
+            </StyledCard>
+            <StyledCard onClick={() => { <CrearOferta/> }} >
+                <StyledIcons><FaBoxOpen/></StyledIcons>
+                <StyledTask>Crear Ofertas</StyledTask>
+            </StyledCard>
+            <StyledCard onClick={() => { <CrearCliente/> }} >
+                <StyledIcons><FaUserFriends/></StyledIcons>
+                <StyledTask>Crear Clientes</StyledTask>
+            </StyledCard>
+            <StyledCard onClick={() => { <CrearMediosDePagos/> }} >
+                <StyledIcons><FaMoneyBillAlt/></StyledIcons>
+                <StyledTask>Medios de Pago</StyledTask>
+            </StyledCard>
+            <StyledCard onClick={() => { <CrearProducto/> }} >
+                <StyledIcons><FaTags/></StyledIcons>
+                <StyledTask>Crear Productos</StyledTask>
+            </StyledCard>        
         </>        
     );
 }

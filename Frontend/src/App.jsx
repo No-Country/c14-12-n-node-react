@@ -16,6 +16,7 @@ import CuidadoPersonal from "./pages/CuidadoPersonal";
 import Perfumeria from "./pages/Perfumeria";
 import AllProducts from "./pages/AllProducts";
 import OnlyOneProduct from "./pages/OnlyOneProduct";
+import Regist_Categoria from "./components/Regist_Categoria";
 
 function App() {
   // const [auth, setAuth] = useState(true);
@@ -29,7 +30,7 @@ function App() {
         <Router>
           <Header />
           <Routes>
-            <Route path="/" exact element={<Home />} />
+            <Route path="/" exact element={<Home/>} />
             <Route path="/login" exact element={<Login />} />
             <Route path="/error" exact element={<ErrorPage />} />
             {/* <Route path="/service" exact element={<Service />} /> */}
@@ -48,6 +49,7 @@ function App() {
               <Route path="/profile" exact element={<Profile />} />
               <Route element={<ProtectedRouteAdmin />}>
                 <Route path="/admin" exact element={<Admin />} />
+                <Route path="/admin/crearCategoria" exact element={<Regist_Categoria />} />
               </Route>
             </Route>
           </Routes>
