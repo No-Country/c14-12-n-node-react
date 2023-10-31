@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { FaThList, FaMoneyBillAlt, FaUserFriends, FaTruck, FaBoxOpen, FaTags } from 'react-icons/fa';
-import CrearCategoria from './Regist_Categoria';
-import CrearMediosDeEnvio from './Regist_Envios';
-import CrearOferta from './Regist_Ofertas';
-import CrearCliente from './Regist_Clientes';
-import CrearMediosDePagos from './Regist_Pagos';
-import CrearProducto from './Regist_Producto';
+// import CrearCategoria from './Regist_Categoria';
+// import Envios from './Envios';
+// import CrearBanner from './CrearBanner';
+// import EliminarClientes from './EliminarClientes';
+// import CrearOfertas from './CrearOfertas';
+// import CrearProducto from './CrearProducto';
 import { useNavigate } from 'react-router-dom';
 
 const StyledCard = styled.div`
@@ -49,34 +49,50 @@ font-size: 16px
 const CardsAdmin = () => {
     const navigate = useNavigate(); 
 
-    const goCrearCategoria = ( ) => {
-        navigate('/admin/crearCategoria')
+    const goCrearProducto = ( ) => {
+        navigate('/admin/CrearProducto')
     }
+    const goCrearBanner = ( ) => {
+        navigate('/admin/CrearBanner')
+    }
+    const goEliminarClientes = ( ) => {
+        navigate('/admin/EliminarClientes')
+    }
+    const goEnvios = ( ) => {
+        navigate('/admin/Envios')
+    }  
+    const goCrearOfertas = ( ) => {
+        navigate('/admin/CrearOfertas')
+    }
+    const goMediosDePago = ( ) => {
+        navigate('/admin/MediosDePago')
+    }
+
     return (
         <>
-            <StyledCard onClick={ goCrearCategoria }>
+            <StyledCard onClick={ goCrearProducto }>
                 <StyledIcons><FaThList/></StyledIcons>
-                <StyledTask>Crear una Categoría</StyledTask>
+                <StyledTask>Crear Producto</StyledTask>
             </StyledCard>
-            <StyledCard onClick={() => { <CrearMediosDeEnvio/> }} >
-                <StyledIcons><FaTruck/></StyledIcons>
-                <StyledTask>Medios de Envío</StyledTask>
-            </StyledCard>
-            <StyledCard onClick={() => { <CrearOferta/> }} >
+            <StyledCard onClick={ goCrearBanner} >
                 <StyledIcons><FaBoxOpen/></StyledIcons>
+                <StyledTask>Crear Banner</StyledTask>
+            </StyledCard>
+            <StyledCard onClick={ goEliminarClientes} >
+                <StyledIcons><FaUserFriends/></StyledIcons>
+                <StyledTask>Eliminar Clientes</StyledTask>
+            </StyledCard>
+            <StyledCard onClick={ goEnvios } >
+                <StyledIcons><FaTruck/></StyledIcons>
+                <StyledTask>Envíos</StyledTask>
+            </StyledCard>
+            <StyledCard onClick={ goCrearOfertas } >
+                <StyledIcons><FaMoneyBillAlt/></StyledIcons>
                 <StyledTask>Crear Ofertas</StyledTask>
             </StyledCard>
-            <StyledCard onClick={() => { <CrearCliente/> }} >
-                <StyledIcons><FaUserFriends/></StyledIcons>
-                <StyledTask>Crear Clientes</StyledTask>
-            </StyledCard>
-            <StyledCard onClick={() => { <CrearMediosDePagos/> }} >
-                <StyledIcons><FaMoneyBillAlt/></StyledIcons>
-                <StyledTask>Medios de Pago</StyledTask>
-            </StyledCard>
-            <StyledCard onClick={() => { <CrearProducto/> }} >
+            <StyledCard onClick={ goMediosDePago } >
                 <StyledIcons><FaTags/></StyledIcons>
-                <StyledTask>Crear Productos</StyledTask>
+                <StyledTask>Medios de Pagos</StyledTask>
             </StyledCard>        
         </>        
     );

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const StyledMenu = styled.nav`
   position: absolute;
@@ -49,15 +50,36 @@ const StyledItem = styled.li`
 `;
 
 function MenuAdmin() {
+  const navigate = useNavigate(); 
+
+  const goCrearProducto = ( ) => {
+      navigate('/admin/CrearProducto')
+  }
+  const goCrearBanner = ( ) => {
+      navigate('/admin/CrearBanner')
+  }
+  const goEliminarClientes = ( ) => {
+      navigate('/admin/EliminarClientes')
+  }
+  const goEnvios = ( ) => {
+      navigate('/admin/Envios')
+  }  
+  const goCrearOfertas = ( ) => {
+      navigate('/admin/CrearOfertas')
+  }
+  const goMediosDePago = ( ) => {
+      navigate('/admin/MediosDePago')
+  }
   return (
     <StyledMenu>
       <StyledUpMenu><FaBars/></StyledUpMenu>      
       <StyledList>
-        <StyledItem>Inicio</StyledItem>
-        <StyledItem>Perfil</StyledItem>
-        <StyledItem>Pedidos</StyledItem>
-        <StyledItem>Ayuda</StyledItem>
-        <StyledItem>Salir</StyledItem>
+        <StyledItem onClick={ goCrearProducto } >Crear Producto</StyledItem>
+        <StyledItem onClick={ goCrearBanner } >Crear Banner</StyledItem>
+        <StyledItem onClick={ goEliminarClientes } >Eliminar Cliente</StyledItem>
+        <StyledItem onClick={ goEnvios } >Envíos</StyledItem>
+        <StyledItem onClick={ goCrearOfertas } >Crear Ofertas</StyledItem>
+        <StyledItem onClick={ goMediosDePago } >Medios de pago</StyledItem>
       </StyledList>
     </StyledMenu>   
   );

@@ -9,7 +9,7 @@ grid-template-columns: repeat(3, 1fr);
 grid-template-rows: repeat(2, 1fr);
 gap: 20px;
 margin-left: 320px;
-padding-bottom: 60px;
+padding-bottom: 100px;
 width: 65rem;
 heigth: 100%;
 `;

@@ -16,8 +16,12 @@ import CuidadoPersonal from "./pages/CuidadoPersonal";
 import Perfumeria from "./pages/Perfumeria";
 import AllProducts from "./pages/AllProducts";
 import OnlyOneProduct from "./pages/OnlyOneProduct";
-import Regist_Categoria from "./components/Regist_Categoria";
-
+import CrearProducto from "./components/CrearProducto";
+import CrearBanner from "./components/CrearBanner";
+import EliminarClientes from "./components/EliminarClientes";
+import Envios from "./components/Envios";
+import CrearOfertas from "./components/CrearOfertas";
+import MediosDePago from "./components/MediosDePago";
 function App() {
   // const [auth, setAuth] = useState(true);
 
@@ -49,7 +53,12 @@ function App() {
               <Route path="/profile" exact element={<Profile />} />
               <Route element={<ProtectedRouteAdmin />}>
                 <Route path="/admin" exact element={<Admin />} />
-                <Route path="/admin/crearCategoria" exact element={<Regist_Categoria />} />
+                <Route path="/admin/CrearProducto" exact element={<CrearProducto />} />
+                <Route path="/admin/CrearBanner" exact element={<CrearBanner />} />
+                <Route path="/admin/EliminarClientes" exact element={<EliminarClientes />} />
+                <Route path="/admin/Envios" exact element={<Envios />} />
+                <Route path="/admin/CrearOfertas" exact element={<CrearOfertas />} />
+                <Route path="/admin/MediosDePago" exact element={<MediosDePago />} />
               </Route>
             </Route>
           </Routes>
