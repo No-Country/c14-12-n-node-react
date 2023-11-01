@@ -1,5 +1,5 @@
 .contenido-topbar {
-  display: flex;
+  display: none;
   font-size: 20px;
   justify-content: space-around;
   padding: 3rem;
@@ -27,4 +27,10 @@
 .envios__imgYstrong p {
   font-weight: 700;
   margin-top: 0.2rem;
+}
+
+@media screen and (min-width: 760px) {
+  .contenido-topbar {
+    display: flex;
+  }
 }

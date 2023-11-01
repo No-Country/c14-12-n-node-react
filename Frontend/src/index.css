@@ -8,6 +8,10 @@
   font-family: poppins, sans-serif;
 }
 
+body {
+  background-color: rgba(216, 213, 213, 0.616);
+}
+
 .fixed-header {
   position: sticky;
   top: 0;

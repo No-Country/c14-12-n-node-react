@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getAll } from "../Services/productosServices";
 import Product from "../components/Product";
 import Spinner from "react-bootstrap/Spinner";
+import "../styles/cardStyle.css";
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -31,16 +32,7 @@ function Products() {
     const limitedProducts = products.slice(0, 4);
 
     return (
-      <div
-        className="container"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          width: "100%",
-          height: "639px",
-          gap: "80px",
-        }}
-      >
+      <div className="container cont-products">
         {limitedProducts.map((product) => (
           <Product key={product?._id} {...product} />
         ))}
