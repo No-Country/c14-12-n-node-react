@@ -24,7 +24,7 @@ const Category = (props) => {
 
   if (loading) {
     return (
-      <div className="d-flex align-items-center">
+      <div className="d-flex align-items-center loading">
         <Spinner animation="grow" />
       </div>
     );

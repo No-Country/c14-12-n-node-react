@@ -15,6 +15,7 @@ function NavBar() {
     count,
     name,
     signOut,
+    refuse,
   } = useAuth();
 
   const [hidePlaceholder, setHidePlaceholder] = useState(false);
@@ -25,6 +26,7 @@ function NavBar() {
 
   const out = () => {
     signOut();
+    refuse();
   };
 
   return (
@@ -57,7 +59,7 @@ function NavBar() {
         </div>
         <nav className="menu-derecho">
           {!isAuthenticated ? (
-            <div className="submenu" onClick={toggleClass}>
+            <div className="submenu1" onClick={toggleClass}>
               <img src="/user-regular-24.png" alt="user" />
               <p id="link">Ingresa</p>{" "}
             </div>
@@ -74,9 +76,7 @@ function NavBar() {
                   margin: "1rem 5rem 0 ",
                 }}
               >
-                <p style={{ color: "white", fontSize: "1.2rem" }}>
-                  Hola {name}
-                </p>
+                <p className="saludo">Hola {name}</p>
                 <p className="logout-button" onClick={out}>
                   Sign Out
                 </p>
@@ -99,7 +99,11 @@ function NavBar() {
           )}
 
           <div className="submenu">
-            <img src="/cart-alt-regular-24.png" alt="cart" />
+            <img
+              className="carrito"
+              src="/cart-alt-regular-24.png"
+              alt="cart"
+            />
             <NavLink id="link" to="/login">
               {count}
             </NavLink>

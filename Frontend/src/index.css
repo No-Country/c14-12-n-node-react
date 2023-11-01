@@ -8,6 +8,10 @@
   font-family: poppins, sans-serif;
 }
 
+body {
+  background-color: rgba(216, 213, 213, 0.616);
+}
+
 .fixed-header {
   position: sticky;
   top: 0;
@@ -20,4 +24,11 @@
 
 html {
   font-size: 62.5%;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30vh auto 50vh;
 }

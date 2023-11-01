@@ -2,15 +2,13 @@
   display: flex;
   position: relative;
   width: 100%;
-  height: 473px;
-
+  height: 150px;
 }
 
 .carousel-image {
   align-items: center;
-  width:100%;
-  height: 460px;
- 
+  width: 100%;
+  height: 150px;
 }
 
 /* .carousel-dots {
@@ -61,4 +59,13 @@
   position: relative;
   top: -150px;
   left: 88%;
+}
+
+@media screen and (min-width: 760px) {
+  .carousel{
+  height: 473px;
+  }
+
+  .carousel-image {
+    height: 473px;
 }

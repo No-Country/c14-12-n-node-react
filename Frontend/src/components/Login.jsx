@@ -78,7 +78,9 @@ const Login = () => {
               <button className="login-buttonfirst">Inicio Sesion</button>
             </li>
             <li className="login-list__items">
-              <button className="login-buttonsecond">Registrarme</button>
+              <button className="login-buttonsecond" onClick={toggleRegister}>
+                Registrarme
+              </button>
             </li>
           </ul>
         </form>
