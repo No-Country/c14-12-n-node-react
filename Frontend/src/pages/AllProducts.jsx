@@ -32,16 +32,7 @@ const AllProducts = () => {
 
     return (
       <>
-        <h1
-          style={{
-            margin: "5rem auto 8rem",
-            textAlign: "center",
-            color: "black",
-            fontSize: "5.5rem",
-          }}
-        >
-          Conoce todos nuestros productos
-        </h1>
+        <h1 className="title-category">Conoce todos nuestros productos</h1>
         <div
           className="container"
           style={{

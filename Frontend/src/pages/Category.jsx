@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Product from "../components/Product";
 import Spinner from "react-bootstrap/esm/Spinner";
 import { getByCategory } from "../Services/productosServices";
+import "../styles/CategoryAndSales.css";
 
 const Category = (props) => {
   const [products, setProducts] = useState([]);
@@ -34,16 +35,7 @@ const Category = (props) => {
 
     return (
       <>
-        <h1
-          style={{
-            margin: "5rem auto 8rem",
-            textAlign: "center",
-            color: "black",
-            fontSize: "5.5rem",
-          }}
-        >
-          {title}
-        </h1>
+        <h1 className="title-category">{title}</h1>
         <div
           className="container"
           style={{

@@ -32,16 +32,7 @@ const Ofertas = () => {
 
     return (
       <>
-        <h1
-          style={{
-            margin: "5rem auto 8rem",
-            textAlign: "center",
-            color: "black",
-            fontSize: "5.5rem",
-          }}
-        >
-          Ofertas Especiales
-        </h1>
+        <h1 className="title-category"> Ofertas Especiales</h1>
         <div
           className="container"
           style={{
