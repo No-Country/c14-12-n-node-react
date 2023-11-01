@@ -1,11 +1,5 @@
 import styled from 'styled-components';
 import { FaThList, FaMoneyBillAlt, FaUserFriends, FaTruck, FaBoxOpen, FaTags } from 'react-icons/fa';
-// import CrearCategoria from './Regist_Categoria';
-// import Envios from './Envios';
-// import CrearBanner from './CrearBanner';
-// import EliminarClientes from './EliminarClientes';
-// import CrearOfertas from './CrearOfertas';
-// import CrearProducto from './CrearProducto';
 import { useNavigate } from 'react-router-dom';
 
 const StyledCard = styled.div`
@@ -20,11 +14,12 @@ const StyledCard = styled.div`
     flex-direction: column;
     text-align: center;
     align-itens: center;
-        &:hover {
-        box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
-        transform: translateY(-5px);
-        transition: all .2s ease-in-out;
+    &:hover {
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+    transform: translateY(-5px);
+    transition: all .2s ease-in-out;
     }
+
 `;
 
 const StyledIcons = styled.div`
