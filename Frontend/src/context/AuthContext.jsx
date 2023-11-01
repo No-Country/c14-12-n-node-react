@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { createContext, useState, useContext, useEffect } from "react";
 import {
   registerRequest,
@@ -131,14 +132,14 @@ export const AuthProvider = ({ children }) => {
     checkLogin();
   }, []);
 
-  const ShoppingCartContext = () => {
-    if (isAuthenticated) {
-      setCount(count + 1);
-      console.log(count);
-    } else {
-      toggleClass();
-    }
-  };
+  // const ShoppingCartContext = () => {
+  //   if (isAuthenticated) {
+  //     setCount(count + 1);
+  //     console.log(count);
+  //   } else {
+  //     toggleClass();
+  //   }
+  // };
 
   const refuse = () => {
     if (isAuthenticated) {
@@ -165,7 +166,7 @@ export const AuthProvider = ({ children }) => {
         name,
         loading,
         signOut,
-        ShoppingCartContext,
+        // ShoppingCartContext,
         count,
         refuse,
       }}
