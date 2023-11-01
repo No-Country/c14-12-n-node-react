@@ -1,52 +1,54 @@
-.Tarjeta {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
+@media screen and (min-width: 320px) {
+  .Tarjeta {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 
-.cardStyle {
-  display: flex;
-  flex-direction: column;
-  max-width: 24rem;
-  max-height: 40rem;
-  min-width: 24rem;
-  min-height: 40rem;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 0 0 -3rem;
-}
+  .cardStyle {
+    display: flex;
+    flex-direction: column;
+    max-width: 24rem;
+    max-height: 40rem;
+    min-width: 24rem;
+    min-height: 40rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0 -3rem;
+  }
 
-.imagen-product {
-  width: 20rem;
-  height: 16rem;
-}
+  .imagen-product {
+    width: 20rem;
+    height: 16rem;
+  }
 
-.tituloCard {
-  font-size: 1.4rem;
-  width: 100%;
-  font-weight: 800;
-  min-height: 10rem;
-  flex-wrap: wrap;
-}
+  .tituloCard {
+    font-size: 1.4rem;
+    width: 100%;
+    font-weight: 800;
+    min-height: 10rem;
+    flex-wrap: wrap;
+  }
 
-.cont-products {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  margin: 4rem 0 4rem;
-  gap: 3rem;
-}
+  .cont-products {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 4rem 0 4rem;
+    gap: 3rem;
+  }
 
-.boton-carrito {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 18rem;
-  height: 48px;
-  padding: 12px, 50px, 12px, 50px;
-  border-radius: 8px;
-  gap: 10px;
-  margin: auto;
+  .boton-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18rem;
+    height: 48px;
+    padding: 12px, 50px, 12px, 50px;
+    border-radius: 8px;
+    gap: 10px;
+    margin: auto;
+  }
 }
 
 @media screen and (min-width: 760px) {

@@ -1,129 +1,131 @@
-.encabezado {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 8rem;
-  top: 74px;
-  background-color: #633974;
-}
-
-.menu-izq {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  width: calc(60% - 132px);
-  height: 93.5px;
-  gap: 0;
-  margin-left: 0;
-}
-
-.img-logo {
-  width: 8rem;
-  height: 8rem;
-}
-
-.input-wrapper {
-  display: none;
-  align-items: center;
-  position: relative;
-}
-
-.input-buscador {
-  background-color: white;
-  width: 508px;
-  height: 56px;
-  border-radius: 20px;
-  padding: 0px 0px 0px 25px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
-  letter-spacing: 0em;
-  border: none;
-  text-align: left;
-  background-color: white;
-  border-radius: 20px;
-  gap: 10px;
-}
-
-.btn_Search {
-  width: 132px;
-  height: 56px;
-  border-radius: 20px;
-  background-color: #eda415;
-  border: none;
-  color: white;
-  cursor: pointer;
-  font-size: 20px;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.menu-derecho {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 0px;
-  margin-left: 0rem;
-}
-
-.submenu {
-  display: flex;
-  justify-content: start;
-  width: 60px;
-  height: 24px;
-  gap: 0px;
-  cursor: pointer;
-}
-
-.submenu1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 5rem;
-  padding: 2rem;
-  cursor: pointer;
-}
-
-.submenu1 p {
-  margin-top: 1.2rem;
-}
-
-#link {
-  color: #ffffff;
-  font-size: 16px;
-  text-align: center;
-  margin-left: 6px;
-}
-
-.logout-button {
-  color: white;
-  font-size: 1.2rem;
-  margin-left: -2rem;
-  cursor: pointer;
-  &:hover {
-    color: orange;
+@media screen and (min-width: 320px) {
+  .encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 8rem;
+    top: 74px;
+    background-color: #633974;
   }
-}
 
-.admin-button {
-  background: #eda415;
-  color: white;
-  font-size: 1.2rem;
-  text-decoration: none;
-  padding: 1rem;
-  border-radius: 2rem;
-  margin-left: 1rem;
-}
+  .menu-izq {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: calc(60% - 132px);
+    height: 93.5px;
+    gap: 0;
+    margin-left: 0;
+  }
 
-.saludo {
-  display: none;
-  color: white;
-  font-size: 1.2rem;
-}
-.carrito {
-  margin-left: -2rem;
+  .img-logo {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .input-wrapper {
+    display: none;
+    align-items: center;
+    position: relative;
+  }
+
+  .input-buscador {
+    background-color: white;
+    width: 508px;
+    height: 56px;
+    border-radius: 20px;
+    padding: 0px 0px 0px 25px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    border: none;
+    text-align: left;
+    background-color: white;
+    border-radius: 20px;
+    gap: 10px;
+  }
+
+  .btn_Search {
+    width: 132px;
+    height: 56px;
+    border-radius: 20px;
+    background-color: #eda415;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .menu-derecho {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0px;
+    margin-left: 0rem;
+  }
+
+  .submenu {
+    display: flex;
+    justify-content: start;
+    width: 60px;
+    height: 24px;
+    gap: 0px;
+    cursor: pointer;
+  }
+
+  .submenu1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5rem;
+    padding: 2rem;
+    cursor: pointer;
+  }
+
+  .submenu1 p {
+    margin-top: 1.2rem;
+  }
+
+  #link {
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 6px;
+  }
+
+  .logout-button {
+    color: white;
+    font-size: 1.2rem;
+    margin-left: -2rem;
+    cursor: pointer;
+    &:hover {
+      color: orange;
+    }
+  }
+
+  .admin-button {
+    background: #eda415;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-left: 1rem;
+  }
+
+  .saludo {
+    display: none;
+    color: white;
+    font-size: 1.2rem;
+  }
+  .carrito {
+    margin-left: -2rem;
+  }
 }
 
 @media screen and (min-width: 760px) {

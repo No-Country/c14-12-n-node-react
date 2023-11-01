@@ -1,71 +1,74 @@
-.carousel {
-  display: flex;
-  position: relative;
-  width: 100%;
-  height: 150px;
-}
-
-.carousel-image {
-  align-items: center;
-  width: 100%;
-  height: 150px;
-}
-
-/* .carousel-dots {
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-} */
-
-/* .carousel-dots span {
-  display: inline-block;
-  position: relative;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #ccc;
-  margin: -1px 15px;
-  cursor: pointer;
-} */
-
-/* .carousel-dots span.active {
-  background-color: var(--darkbluecolor);
-} */
-
-/* .carousel-button {
-  height: 40px;
-  border-radius: 50px;
-  background-color: var(--transparent-white-color);
-  font-size: 30px;
-  color: var(--darkbluecolor);
-  border: none;
-  cursor: pointer;
-  padding-bottom: 20px;
-  &:hover {
-    background-color: #ccc;
+@media screen and (min-width: 320px) {
+  .carousel {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 150px;
   }
-} */
 
-#anterior {
-  width: 5%;
-  position: relative;
-  top: -150px;
-  left: 2%;
-}
+  .carousel-image {
+    align-items: center;
+    width: 100%;
+    height: 150px;
+  }
 
-#siguiente {
-  width: 5%;
-  position: relative;
-  top: -150px;
-  left: 88%;
+  /* .carousel-dots {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  } */
+
+  /* .carousel-dots span {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: -1px 15px;
+    cursor: pointer;
+  } */
+
+  /* .carousel-dots span.active {
+    background-color: var(--darkbluecolor);
+  } */
+
+  /* .carousel-button {
+    height: 40px;
+    border-radius: 50px;
+    background-color: var(--transparent-white-color);
+    font-size: 30px;
+    color: var(--darkbluecolor);
+    border: none;
+    cursor: pointer;
+    padding-bottom: 20px;
+    &:hover {
+      background-color: #ccc;
+    }
+  } */
+
+  #anterior {
+    width: 5%;
+    position: relative;
+    top: -150px;
+    left: 2%;
+  }
+
+  #siguiente {
+    width: 5%;
+    position: relative;
+    top: -150px;
+    left: 88%;
+  }
 }
 
 @media screen and (min-width: 760px) {
-  .carousel{
-  height: 473px;
+  .carousel {
+    height: 473px;
   }
 
   .carousel-image {
     height: 473px;
+  }
 }
