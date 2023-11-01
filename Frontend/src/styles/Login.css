@@ -56,6 +56,15 @@
   border-radius: 1.4rem;
 }
 
+.login-buttonfirst {
+  background-color: #eda415;
+  color: white;
+  border: none;
+  &:hover {
+    background-color: #724e05ce;
+  }
+}
+
 .login-buttonsecond {
   background-color: white;
   border: 1px solid #eda415;
@@ -63,5 +72,6 @@
 
   &:hover {
     color: white;
+    background-color: #724e05ce;
   }
 }

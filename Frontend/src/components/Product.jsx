@@ -14,6 +14,16 @@ import "../styles/cardStyle.css";
 function Product({ _id, name, price, quantity, image }) {
   const { ShoppingCartContext } = useAuth();
 
+  const styles = {
+    responsiveCol: {
+      "@media screen and (min-width:760px)": {
+        margin: "0 -6rem 0 -1rem",
+        display: "flex",
+        justifyContent: "space-evenly",
+      },
+    },
+  };
+
   return (
     <Col
       style={{
@@ -22,14 +32,10 @@ function Product({ _id, name, price, quantity, image }) {
         justifyContent: "space-evenly",
       }}
     >
-      <Row>
+      <Row className="Tarjeta">
         <Card color="light" className="cardStyle">
           <Link to={`/product/${_id}`}>
-            <img
-              alt={name}
-              src={image}
-              style={{ width: "100%", height: "100%" }}
-            />
+            <img alt={name} src={image} className="imagen-product" />
           </Link>
           <CardBody>
             <CardTitle className="tituloCard">{name}</CardTitle>
@@ -39,16 +45,11 @@ function Product({ _id, name, price, quantity, image }) {
             </CardTitle>
 
             <Button
-              className={"btn btn-success btn-lg text-body-light fs-5 fw-bold"}
+              className={
+                "btn btn-success btn-lg text-body-light fs-5 fw-bold boton-carrito"
+              }
               onClick={ShoppingCartContext}
               type="button"
-              style={{
-                width: "244px",
-                height: "48px",
-                padding: "12px, 50px, 12px, 50px",
-                radius: "8px",
-                gap: "10px",
-              }}
             >
               {" "}
               Agregar al Carrito
