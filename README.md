@@ -109,26 +109,35 @@ Link [Figma](https://www.figma.com/file/O9BD9C3sB7Oah49wY3BLLS/E-commerce?type=d
 	<a href="https://github.com/7oSkaaa"><img src="https://img.shields.io/badge/github-%23181717.svg?style=plastic&logo=github&logoColor=white" alt="GitHub"/></a>
 	<a href="https://www.linkedin.com/in/7oskaa/"><img src="https://img.shields.io/badge/linkedin-%230A66C2.svg?style=plastic&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
 </p>
+<img alt="foto" src="https://res.cloudinary.com/dcegmeb0b/image/upload/c_scale,w_70/v1698722287/JuanPabloLondono_iwlhdv.jpg">
 
 #### Juan Pablo Londoño
 [Github](https://github.com/Map4che "Github")
 [Linkedin](https://www.linkedin.com/in/juanpablolondonog/ "Linkedin")
 Fullstack
 
+<img alt="foto" src="https://res.cloudinary.com/dcegmeb0b/image/upload/c_scale,w_70/v1698722306/AlfredoRivera_cq2tix.jpg">
+
 #### Alfredo Rivera
 [Github](https://github.com/lariverag "Github")
 [Linkedin](http://www.linkedin.com/in/alfredorivera1982 "Linkedin")
 Backend
+
+<img alt="foto" src="https://res.cloudinary.com/dcegmeb0b/image/upload/c_scale,w_70/v1698722293/FernandoDiBiasi_duv098.jpg">
 
 #### Fernando Di Biasi
 [Github](https://github.com/Fddibiasi "Github")
 [Linkedin](https://www.linkedin.com/in/fernando-di-biasi-865b06238/ "Linkedin")
 Frontend
 
+<img alt="foto" src="https://res.cloudinary.com/dcegmeb0b/image/upload/c_scale,w_70/v1698722299/CristianToia_ug9qfc.jpg">
+
 #### Cristian Toia
 [Github](https://github.com/cricritoia "Github")
 [Linkedin](https://www.linkedin.com/in/cristian-daniel-toia "Linkedin")
 Frontend
+
+<img alt="foto" src="https://res.cloudinary.com/dcegmeb0b/image/upload/c_scale,w_70/v1698722304/LenisCastillo_x67dkt.jpg">
 
 #### Lenis Castillo
 [Github](https://github.com/lencasb "Github")
