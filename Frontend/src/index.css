@@ -21,3 +21,14 @@
 html {
   font-size: 62.5%;
 }
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30vh auto 50vh;
+}
+
+Spinner {
+  width: 40rem;
+}

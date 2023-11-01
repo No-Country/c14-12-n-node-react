@@ -3,7 +3,6 @@ import { getAll } from "../Services/productosServices";
 import Product from "../components/Product";
 import Spinner from "react-bootstrap/Spinner";
 
-
 function Products() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -23,7 +22,7 @@ function Products() {
 
   if (loading) {
     return (
-      <div className="d-flex align-items-center">
+      <div className="d-flex align-items-center loading">
         <Spinner animation="grow" />
       </div>
     );
