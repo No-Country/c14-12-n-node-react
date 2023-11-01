@@ -3,10 +3,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 1728px;
+    width: 94%;
     height: 71px;
-    top: 174px;
-    padding: 26px, 201px, 15px, 205px;
     gap: 98px;
   }
 
@@ -17,7 +15,7 @@
 
   /* Estilos para los enlaces (NavLink) */
   .menu a {
-    width: 100%;
+    width: 94%;
     display: flex;
     text-decoration: none;
     color: #111111;
