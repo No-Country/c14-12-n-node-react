@@ -48,7 +48,7 @@ const Register = () => {
       >
         <img
           className="close"
-          src="close.svg"
+          src="/close.svg"
           alt="close"
           onClick={toggleRegister}
         />
