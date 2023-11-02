@@ -35,7 +35,7 @@ const Login = () => {
       <div className={`container-login ${loginActive ? "login" : ""}`}>
         <img
           className="close"
-          src="close.svg"
+          src="/close.svg"
           alt="close"
           onClick={toggleClass}
         />
