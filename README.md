@@ -6,6 +6,8 @@ Es una ecommerce B2C enfocada en generar la venta de productos de belleza, perfu
 
 Link [Marlui](https://c14-12-n-node-react.vercel.app/ "Marlui")
 
+Link [Video](https://youtu.be/DjrguBpVauw "Video")
+
 Link [Drive Testing](https://drive.google.com/drive/folders/1-aptINneFBeOxluR_jG4A82Jq8oqX47w?usp=drive_link "Drive Testing")
 
 Link [Figma](https://www.figma.com/file/O9BD9C3sB7Oah49wY3BLLS/E-commerce?type=design&node-id=0-1&mode=design&t=xH0QvyC98vvrhLPT-0 "Figma")
