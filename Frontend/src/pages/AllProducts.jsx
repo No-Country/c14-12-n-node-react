@@ -32,7 +32,9 @@ const AllProducts = () => {
 
     return (
       <>
-        <h1 className="title-category">Conoce todos nuestros productos</h1>
+        <h1 className="title-category" id="top">
+          Conoce todos nuestros productos
+        </h1>
         <div
           className="container"
           style={{
